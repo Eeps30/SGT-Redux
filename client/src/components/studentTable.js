@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import { retrieveStudentData } from './Helpers/retrieveStudentData';
 import StudentRow from './studentRow';
 
 class StudentTable extends Component {
-
-    componentDidMount(){
-        const studentData = retrieveStudentData();
-        console.log(studentData);
-    }
 
     render(){
         return(
@@ -18,6 +12,7 @@ class StudentTable extends Component {
                             <td>Student Name</td>
                             <td>Student Course</td>
                             <td>Student Grade</td>
+                            <td>Operations</td>
                         </tr>
                         <StudentRow/>
                     </tbody>

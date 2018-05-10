@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { GradeAverage, gradeAverage } from './Context/gradeAverage'
 
 class Header extends Component {
-    constructor(props){
-        super(props)
-
-        this.state = {
-            gradeAverage: 0
-        }
-    }
 
     render(){
         return (
-            <div>
-                <div>Student Grade Table</div>
-                <div>Grade Average: {this.state.gradeAverage}</div>
-            </div>
+            <GradeAverage.Consumer>
+                {average => (
+                    <div>
+                        <div>Student Grade Table</div>
+                        <div>Grade Average: {gradeAverage.average}</div>
+                    </div>
+                )}
+            </GradeAverage.Consumer>
         )
     }
 }

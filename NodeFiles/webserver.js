@@ -25,7 +25,7 @@ connection.connect((err) => {
 
 //RETRIEVE STUDENT DATA
 app.get('/students', (req, res, next) => {
-    let query = 'SELECT * FROM ??';
+    let query = 'SELECT * FROM ?? WHERE status = 1';
     let inserts = ['student_data'];
     let sql = mysql.format(query, inserts);
 
@@ -58,6 +58,25 @@ app.post('/students/addstudent', (req, res, next) => {
         res.json(output);
     })
 })
+
+//SOFT DELETE SELECTED STUDENT FROM TABLE
+app.post('/students/delete', (req, res, next) => {
+    const { id } = req.body;
+
+    let query = 'UPDATE ?? SET ?? = ? WHERE ?? = ?';
+    let inserts = ['student_data', 'status', '0', 'id', id];
+
+    let sql = mysql.format(query, inserts);
+    console.log("This is the formatted SQL", sql);
+    connection.query(sql, (err, results, fields) => {
+        if (err) return next(err);
+        const output = {
+            success : true,
+            data: results
+        }
+        res.json(output);
+    })
+});
 
 
 app.listen(PORT, () => {
