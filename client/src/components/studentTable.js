@@ -14,6 +14,11 @@ class StudentTable extends Component {
             <div>
                 <table>
                     <tbody>
+                        <tr>
+                            <td>Student Name</td>
+                            <td>Student Course</td>
+                            <td>Student Grade</td>
+                        </tr>
                         <StudentRow/>
                     </tbody>
                 </table>

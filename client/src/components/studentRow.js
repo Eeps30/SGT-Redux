@@ -1,23 +1,49 @@
-import React from 'react'
-import { retrieveStudentData } from './Helpers/retrieveStudentData';
+import React, { Component } from 'react'
+// import { retrieveStudentData } from './Helpers/retrieveStudentData'
+import axios from 'axios'
 
-const StudentRow = () => {
-    const studentData = retrieveStudentData()
-    console.log('Data at StudentRow: ', studentData);
-    //async await here until axios call retrieves data before
-    //building rows
+class StudentRow extends Component {
+    constructor(props){
+        super(props)
 
-    const studentRows = studentData.map(item => (
-        <tr>
-            <td>{studentData.name}</td>
-            <td>{studentData.grade}</td>
-            <td>{studentData.course_name}</td>
-        </tr>
-    ))
+        this.state = {
+            students:[]
+        }
 
-    return (
-        {studentRows}
-    )
+    }
+
+    componentDidMount() {
+
+        axios.get('http://localhost:8000/students')
+        .then(response => {
+            console.log(response.data.data);
+            this.setState({
+                students: response.data.data
+            })
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+    }
+
+    render(){
+
+        const { students } = this.state
+        const itemElements = students.map((item, index) => {
+            return (
+                <tr key={index}>
+                    <td>{item.name}</td>
+                    <td>{item.course_name}</td>
+                    <td>{item.grade}</td>
+                </tr>
+            )
+        });
+        
+        return (
+           itemElements
+        )
+    }
 }
 
 export default StudentRow;
