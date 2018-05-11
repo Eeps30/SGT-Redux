@@ -1,48 +1,21 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import { connect } from 'react-redux'
+import { getList, deleteItem } from '../components/actions'
 
 class StudentRow extends Component {
-    constructor(props){
-        super(props)
-
-        this.state = {
-            students:[]
-        }
-    }
-
+    
     componentDidMount() {
-
-        
-        axios.get('http://localhost:8000/students')
-        .then(response => {
-            console.log(response.data.data);
-            this.setState({
-                students: response.data.data
-            })
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-
+        this.props.getList()
     }
 
     handleDelete(id){
-    
-        axios.post('http://localhost:8000/students/delete', {
-            id: id
-        })
-        .then(function(response){
-            console.log(response)
-        })
-        .catch(function(error){
-            console.log(error)
-        })
-        
+        this.props.deleteItem(id)
     }
 
     render(){
 
-        const { students } = this.state
+        console.log('Student List', this.props)
+        const { students } = this.props
         
         const itemElements = students.map((item, index) => {
 
@@ -63,4 +36,10 @@ class StudentRow extends Component {
     }
 }
 
-export default StudentRow;
+function mapStateToProps(state){
+    return {
+        students: state.list.items
+    }
+}
+
+export default connect(mapStateToProps, {getList, deleteItem})(StudentRow);
