@@ -12,6 +12,7 @@ class StudentRow extends Component {
 
     componentDidMount() {
 
+        
         axios.get('http://localhost:8000/students')
         .then(response => {
             console.log(response.data.data);
@@ -42,8 +43,7 @@ class StudentRow extends Component {
     render(){
 
         const { students } = this.state
-        const { id } = this.state.students
-
+        
         const itemElements = students.map((item, index) => {
 
             return (
@@ -54,6 +54,7 @@ class StudentRow extends Component {
                     <td><button onClick={this.handleDelete.bind(this, item.id)}>Delete</button></td>
                 </tr>
             )
+
         });
         
         return (
