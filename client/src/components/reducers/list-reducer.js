@@ -1,4 +1,4 @@
-import types from '../components/actions/types';
+import types from '../actions/types';
 
 const DEFAULT_STATE = {
     items: [],
