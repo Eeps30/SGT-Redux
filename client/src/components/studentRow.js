@@ -14,7 +14,6 @@ class StudentRow extends Component {
 
     render(){
 
-        console.log('Student List', this.props)
         const { students } = this.props
         
         const itemElements = students.map((item, index) => {

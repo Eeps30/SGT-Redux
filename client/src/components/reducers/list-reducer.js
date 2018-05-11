@@ -3,7 +3,7 @@ import types from '../actions/types';
 const DEFAULT_STATE = {
     items: [],
     singleItem: {},
-    gradeAverage: ''
+    gradeAverage: 0
 };
 
 export default function(state = DEFAULT_STATE, action){
