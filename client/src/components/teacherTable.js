@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import StudentRow from './studentRow';
 import Header from '../components/header';
 import AddStudentForm from '../components/addStudentForm';
 import { Link } from 'react-router-dom';
+import StudentRow from './studentRow';
 
-class StudentTable extends Component {
+class TeacherTable extends Component {
 
     render(){
         return(
@@ -22,10 +22,10 @@ class StudentTable extends Component {
                     </tbody>
                 </table>
                 <AddStudentForm/>
-                <Link className="btn" to="/teacherTable">View Teachers</Link>
+                <Link className="btn" to="/">View Students</Link>
             </div>
         )
     }
 }
 
-export default StudentTable
+export default TeacherTable

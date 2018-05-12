@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import AddStudentForm from './components/addStudentForm';
-import Header from './components/header';
 import StudentTable from './components/studentTable';
+import TeacherTable from './components/teacherTable';
+import { Route } from 'react-router-dom';
 
 class App extends Component {  
   
   render() {
     return (
         <div className="App">
-          <Header/>
-          <StudentTable/>
-          <AddStudentForm/>
+          <Route exact path = '/' component={StudentTable}/>
+          <Route path = '/teacherTable' component={TeacherTable}/>
         </div>
     );
   }
