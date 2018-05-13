@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import StudentTable from './components/studentTable';
 import TeacherTable from './components/teacherTable';
 import { Route } from 'react-router-dom';
+import './css/app.css';
 
 class App extends Component {  
   

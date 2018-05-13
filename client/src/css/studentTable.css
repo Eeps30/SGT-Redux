@@ -1,0 +1,33 @@
+.studentContainer {
+    display: grid;
+    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%
+    5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px
+    40px 40px 40px 40px 40px 40px 40px;
+}
+
+.studentTable {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 16;
+    margin-right: 6%;
+}
+
+.addStudentContainer {
+    grid-column-start: 16;
+    grid-column-end: 20;
+    display: inline-block;
+    grid-row-start: 2;
+}
+
+.studentHeader {
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+}
+
+.viewTeachersButton {
+    grid-column-start: 16;
+    grid-column-end: 19;
+    grid-row-start: 6;
+}

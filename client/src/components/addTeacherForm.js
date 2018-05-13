@@ -64,7 +64,7 @@ class AddTeacherForm extends Component {
 
     render(){
         return (
-            <div className="container">
+            <div className="addTeacherContainer">
                 <h3>Add Item</h3>
                 <form>
                     <input onChange={this.handleNameEntry.bind(this)} name="name" placeholder="Name" type="text" value={this.state.name}/>

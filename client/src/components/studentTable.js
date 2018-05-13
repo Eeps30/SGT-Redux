@@ -3,14 +3,15 @@ import StudentRow from './studentRow';
 import Header from '../components/header';
 import AddStudentForm from '../components/addStudentForm';
 import { Link } from 'react-router-dom';
+import '../css/studentTable.css';
 
 class StudentTable extends Component {
 
     render(){
         return(
-            <div>
+            <div className="studentContainer">
                 <Header/>
-                <table>
+                <table className="studentTable">
                     <tbody>
                         <tr>
                             <td>Student Name</td>
@@ -22,7 +23,7 @@ class StudentTable extends Component {
                     </tbody>
                 </table>
                 <AddStudentForm/>
-                <Link className="btn" to="/teacherTable">View Teachers</Link>
+                <Link className="btn viewTeachersButton" to="/teacherTable">View Teachers</Link>
             </div>
         )
     }

@@ -16,7 +16,7 @@ class Header extends Component {
         gradeAverage = gradeTotal/students.length
 
         return (
-            <div>
+            <div className="studentHeader">
                 <p>Grade Average: {gradeAverage} </p>
             </div>
         )
