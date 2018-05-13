@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getList } from '../components/actions'
+import { getStudentList } from '../components/actions'
 
 class Header extends Component {
 
@@ -29,4 +29,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {getList})(Header);
+export default connect(mapStateToProps, {getStudentList})(Header);

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getStudentList, deleteItem } from '../components/actions'
+import { getTeacherList, deleteItem } from '../components/actions'
 
-class StudentRow extends Component {
+class TeacherRow extends Component {
     
     componentDidMount() {
-        this.props.getStudentList()
+        this.props.getTeacherList()
     }
 
     handleDelete(id){
@@ -15,6 +15,7 @@ class StudentRow extends Component {
     render(){
 
         const { students } = this.props
+        console.log('Teacher Row Component: ', students)
         
         const itemElements = students.map((item, index) => {
 
@@ -22,7 +23,7 @@ class StudentRow extends Component {
                 <tr key={index}>
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
-                    <td>{item.grade}</td>
+                    <td>{item.class_size}</td>
                     <td><button onClick={this.handleDelete.bind(this, item.id)}>Delete</button></td>
                 </tr>
             )
@@ -41,4 +42,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {getStudentList, deleteItem})(StudentRow);
+export default connect(mapStateToProps, {getTeacherList, deleteItem})(TeacherRow);

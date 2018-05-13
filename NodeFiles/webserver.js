@@ -40,12 +40,48 @@ app.get('/students', (req, res, next) => {
     })
 })
 
+//RETRIEVE TEACHER DATA
+app.get('/teachers', (req, res, next) => {
+    let query = 'SELECT * FROM ?? WHERE status = 1';
+    let inserts = ['teacher_data'];
+    let sql = mysql.format(query, inserts);
+
+    connection.query(sql, (err, results, fields) => {
+        if(err) return next(err);
+
+        const output = {
+            success: true,
+            data: results
+        }
+        res.json(output);
+    })
+})
+
 //INSERT STUDENT TO TABLE
 app.post('/students/addstudent', (req, res, next) => {
     const { name, grade, course_name } = req.body;
 
     let query = 'INSERT INTO ?? (??, ??, ??) VALUES (?, ?, ?)';
     let inserts = ['student_data', 'name', 'grade', 'course_name', name, grade, course_name];
+
+    let sql = mysql.format(query, inserts);
+    console.log("This is the formatted SQL", sql);
+    connection.query(sql, (err, results, fields) => {
+        if (err) return next(err);
+        const output = {
+            success : true,
+            data: results
+        }
+        res.json(output);
+    })
+})
+
+//INSERT TEACHER TO TABLE
+app.post('/students/addteacher', (req, res, next) => {
+    const { name, course_name, class_size } = req.body;
+
+    let query = 'INSERT INTO ?? (??, ??, ??) VALUES (?, ?, ?)';
+    let inserts = ['teacher_data', 'name', 'course_name', 'class_size', name, course_name, class_size];
 
     let sql = mysql.format(query, inserts);
     console.log("This is the formatted SQL", sql);

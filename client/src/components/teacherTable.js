@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
-import Header from '../components/header';
-import AddStudentForm from '../components/addStudentForm';
+import AddTeacherForm from '../components/addTeacherForm';
 import { Link } from 'react-router-dom';
-import StudentRow from './studentRow';
+import TeacherRow from './teacherRow';
 
 class TeacherTable extends Component {
 
     render(){
         return(
             <div>
-                <Header/>
                 <table>
                     <tbody>
                         <tr>
-                            <td>Student Name</td>
-                            <td>Student Course</td>
-                            <td>Student Grade</td>
+                            <td>Teacher Name</td>
+                            <td>Course</td>
+                            <td>Class Size</td>
                             <td>Operations</td>
                         </tr>
-                        <StudentRow/>
+                        <TeacherRow/>
                     </tbody>
                 </table>
-                <AddStudentForm/>
+                <AddTeacherForm/>
                 <Link className="btn" to="/">View Students</Link>
             </div>
         )
