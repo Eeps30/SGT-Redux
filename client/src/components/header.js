@@ -13,12 +13,18 @@ class Header extends Component {
             gradeTotal += item.grade
         })
 
-        gradeAverage = gradeTotal/students.length
+        gradeAverage = parseInt(gradeTotal/students.length)
 
         return (
-            <div className="studentHeader">
-                <p>Grade Average: {gradeAverage} </p>
+            <div>
+                <div className="headerTitle">
+                    <h1 className="title">Student Grade Table</h1>
+                </div>
+                <div className="studentHeader">
+                    <p>Grade Average: {gradeAverage} </p>
+                </div>
             </div>
+            
         )
     }
 }

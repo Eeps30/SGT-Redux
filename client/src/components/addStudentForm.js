@@ -65,13 +65,15 @@ class AddStudentForm extends Component {
     render(){
         return (
             <div className="addStudentContainer">
-                <h3>Add Item</h3>
-                <form>
-                    <input onChange={this.handleNameEntry.bind(this)} name="name" placeholder="Name" type="text" value={this.state.name}/>
-                    <input onChange={this.handleCourseEntry.bind(this)} name="course" placeholder="Course" type="text" value={this.state.course}/>
-                    <input onChange={this.handleGradeEntry.bind(this)} name="grade" placeholder="Grade" type="text" value={this.state.grade}/>
-                    <button onClick={this.handleSubmit.bind(this)}>Add Student</button>
-                </form>
+                <div className="addStudentForm">
+                    <h3>Add Item</h3>
+                    <form>
+                        <input onChange={this.handleNameEntry.bind(this)} name="name" placeholder="Name" type="text" value={this.state.name}/>
+                        <input onChange={this.handleCourseEntry.bind(this)} name="course" placeholder="Course" type="text" value={this.state.course}/>
+                        <input onChange={this.handleGradeEntry.bind(this)} name="grade" placeholder="Grade" type="text" value={this.state.grade}/>
+                        <button onClick={this.handleSubmit.bind(this)}>Add Student</button>
+                    </form>
+                </div>
             </div>
         )
     }

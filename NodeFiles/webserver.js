@@ -114,6 +114,25 @@ app.post('/students/delete', (req, res, next) => {
     })
 });
 
+//SOFT DELETE SELECTED TEACHER FROM TABLE
+app.post('/teachers/delete', (req, res, next) => {
+    const { id } = req.body;
+
+    let query = 'UPDATE ?? SET ?? = ? WHERE ?? = ?';
+    let inserts = ['teacher_data', 'status', '0', 'id', id];
+
+    let sql = mysql.format(query, inserts);
+    console.log("This is the formatted SQL", sql);
+    connection.query(sql, (err, results, fields) => {
+        if (err) return next(err);
+        const output = {
+            success : true,
+            data: results
+        }
+        res.json(output);
+    })
+});
+
 
 app.listen(PORT, () => {
     console.log("Server started on PORT: ", PORT);

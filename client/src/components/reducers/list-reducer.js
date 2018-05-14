@@ -12,7 +12,9 @@ export default function(state = DEFAULT_STATE, action){
             return {...state, items: action.payload.data.data};
         case types.GET_TEACHER_LIST_DATA:
             return {...state, items: action.payload.data.data}
-        case types.DELETE_SINGLE_ITEM:
+        case types.DELETE_SINGLE_STUDNET:
+            return {...state, singleItem: action.payload}
+        case types.DELETE_SINGLE_TEACHER:
             return {...state, singleItem: action.payload}
         default:
             return state;

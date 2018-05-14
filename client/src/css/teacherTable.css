@@ -9,19 +9,31 @@
 .teacherTable {
     grid-row-start: 3;
     grid-column-start: 2;
-    grid-column-end: 16;
-    margin-right: 6%;
+    grid-column-end: 15;
+    border-radius: 5px;
 }
 
 .addTeacherContainer {
     grid-column-start: 16;
     grid-column-end: 20;
     display: inline-block;
-    grid-row-start: 2;
+    grid-row-start: 3;
 }
 
 .viewStudentsButton {
     grid-column-start: 16;
     grid-column-end: 19;
-    grid-row-start: 6;
+    grid-row-start: 7;
+}
+
+.teacherTable > tbody > tr > td {
+    padding-bottom: 2%;
+}
+
+.columnLabels {
+    text-decoration: underline;
+}
+
+.addTeacherForm {
+    border: solid black 1px;
 }

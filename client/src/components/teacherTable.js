@@ -11,7 +11,7 @@ class TeacherTable extends Component {
             <div className="teacherContainer">
                 <table className="teacherTable">
                     <tbody>
-                        <tr>
+                        <tr className="columnLabels">
                             <td>Teacher Name</td>
                             <td>Course</td>
                             <td>Class Size</td>

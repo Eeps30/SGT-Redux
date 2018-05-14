@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getStudentList, deleteItem } from '../components/actions'
+import { getStudentList, deleteStudent } from '../components/actions'
 
 class StudentRow extends Component {
     
@@ -9,7 +9,7 @@ class StudentRow extends Component {
     }
 
     handleDelete(id){
-        this.props.deleteItem(id)
+        this.props.deleteStudent(id)
     }
 
     render(){
@@ -41,4 +41,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {getStudentList, deleteItem})(StudentRow);
+export default connect(mapStateToProps, {getStudentList, deleteStudent})(StudentRow);

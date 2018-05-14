@@ -1,3 +1,9 @@
+.title {
+    color: rgb(242, 242, 242);
+    grid-row-start:2;
+    grid-column-start: 2;
+}
+
 .studentContainer {
     display: grid;
     grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%
@@ -7,27 +13,63 @@
 }
 
 .studentTable {
-    grid-row-start: 3;
+    grid-row-start: 4;
     grid-column-start: 2;
-    grid-column-end: 16;
-    margin-right: 6%;
+    grid-column-end: 15;
+    border-radius: 5px;
+    background-color: rgb(242, 242, 242);
+    box-shadow: 4px 4px 5px;
+    border: solid black 1px;
 }
 
 .addStudentContainer {
     grid-column-start: 16;
     grid-column-end: 20;
     display: inline-block;
-    grid-row-start: 2;
+    grid-row-start: 4;
 }
 
 .studentHeader {
     grid-column-start: 2;
     grid-column-end: 5;
-
+    background-color: rgb(242, 242, 242);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 4px 4px 5px;
+    border: solid black 1px;
 }
 
 .viewTeachersButton {
     grid-column-start: 16;
     grid-column-end: 19;
-    grid-row-start: 6;
+    grid-row-start: 10;
+}
+
+.addStudentForm {
+    border: solid black 1px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px;
+    border: solid black 1px;
+}
+
+.addStudentForm > h3 {
+    padding-left: 5%;
+}
+
+.addStudentForm > form {
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+.addStudentForm > form > input {
+    margin-bottom: 10%;
+}
+
+.studentTable > tbody > tr > td {
+    padding-bottom: 2%;
+}
+
+.headerTitle {
+    
 }
