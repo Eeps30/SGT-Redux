@@ -13,7 +13,7 @@ class StudentTable extends Component {
                 <Header/>
                 <table className="studentTable">
                     <tbody>
-                        <tr className="columnLabels">
+                        <tr className="studentColumnLabels">
                             <td>Student Name</td>
                             <td>Student Course</td>
                             <td>Student Grade</td>

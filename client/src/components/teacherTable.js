@@ -3,15 +3,17 @@ import AddTeacherForm from '../components/addTeacherForm';
 import { Link } from 'react-router-dom';
 import TeacherRow from './teacherRow';
 import '../css/teacherTable.css';
+import TeacherHeader from '../components/teacherHeader';
 
 class TeacherTable extends Component {
 
     render(){
         return(
             <div className="teacherContainer">
+                <TeacherHeader/>
                 <table className="teacherTable">
                     <tbody>
-                        <tr className="columnLabels">
+                        <tr className="teacherColumnLabels">
                             <td>Teacher Name</td>
                             <td>Course</td>
                             <td>Class Size</td>
@@ -21,7 +23,7 @@ class TeacherTable extends Component {
                     </tbody>
                 </table>
                 <AddTeacherForm/>
-                <Link className="btn viewStudentsButton" to="/">View Students Table</Link>
+                <Link className="btn viewStudentsButton" to="/">View Students</Link>
             </div>
         )
     }

@@ -16,15 +16,14 @@ class Header extends Component {
         gradeAverage = parseInt(gradeTotal/students.length)
 
         return (
-            <div>
+            <React.Fragment>
                 <div className="headerTitle">
-                    <h1 className="title">Student Grade Table</h1>
+                    <h1 className="studentTitle">Student Grade Table</h1>
                 </div>
-                <div className="studentHeader">
+                <div className="studentGradeAverage">
                     <p>Grade Average: {gradeAverage} </p>
                 </div>
-            </div>
-            
+            </React.Fragment>
         )
     }
 }

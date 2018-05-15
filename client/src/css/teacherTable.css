@@ -1,3 +1,15 @@
+.title {
+    color: rgb(242, 242, 242);
+    grid-row-start:2;
+    grid-column-start: 2;
+}
+
+.headerContainer {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 15;
+}
+
 .teacherContainer {
     display: grid;
     grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%
@@ -7,33 +19,107 @@
 }
 
 .teacherTable {
-    grid-row-start: 3;
+    grid-row-start: 4;
     grid-column-start: 2;
     grid-column-end: 15;
     border-radius: 5px;
+    background-color: rgb(242, 242, 242);
+    box-shadow: 4px 4px 5px;
+    border: solid black 1px;
+    margin-bottom: 5%;
 }
 
 .addTeacherContainer {
     grid-column-start: 16;
-    grid-column-end: 20;
-    display: inline-block;
-    grid-row-start: 3;
+    grid-column-end: 19;
+    grid-row-start: 4;
+}
+
+.gradeAverage {
+    background-color: rgb(242, 242, 242);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 4px 4px 5px;
+    border: solid black 1px;
+    grid-row-start: 2;
+    grid-column-start: 13;
+    grid-column-end: 15;
 }
 
 .viewStudentsButton {
     grid-column-start: 16;
     grid-column-end: 19;
-    grid-row-start: 7;
+    grid-row-start: 10;
+    background-color: rgb(0,149,210);
+    width: 55%;
+    height: 70%;
+    text-align: center;
+    padding-top: 5%;
+    border-radius: 5px;
+    border: solid white 2px;
+    color: ghostwhite; 
+}
+
+.addTeacherForm {
+    background-color: rgb(242, 242, 242);
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px;
+    border: solid black 1px;
+}
+
+.addTeacherForm > h3 {
+    padding-left: 5%;
+}
+
+.addTeacherForm > form {
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+.addTeacherForm > form > input {
+    margin-bottom: 10%;
+}
+
+.addTeacherForm > form > button {
+    background-color: rgb(0,205,116);
+    border-radius: 5px;
 }
 
 .teacherTable > tbody > tr > td {
     padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 5%;
 }
 
-.columnLabels {
+.teacherTable > tbody > tr > td > button {
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    height: 130%;
+    box-shadow: 1px 1px;
+    color: white;
+}
+
+.teacherHeaderTitle {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+
+.teacherHeader {
+    color: white;
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 21;
+    height: 80%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.teacherHeader > h1 {
+    margin: 1%;
+}
+
+.teacherColumnLabels > td {
+    font-size: 1.3em;
     text-decoration: underline;
-}
-
-.addTeacherForm {
-    border: solid black 1px;
 }

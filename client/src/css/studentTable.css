@@ -1,7 +1,15 @@
-.title {
+.studentTitle {
     color: rgb(242, 242, 242);
-    grid-row-start:2;
-    grid-column-start: 2;
+    margin: 1%;
+}
+
+.headerTitle {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 21;
+    background-color: black;
+    height: 80%;
 }
 
 .studentContainer {
@@ -13,25 +21,27 @@
 }
 
 .studentTable {
-    grid-row-start: 4;
+    grid-row-start: 5;
     grid-column-start: 2;
     grid-column-end: 15;
     border-radius: 5px;
     background-color: rgb(242, 242, 242);
     box-shadow: 4px 4px 5px;
     border: solid black 1px;
+    margin-bottom: 5%;
 }
 
 .addStudentContainer {
     grid-column-start: 16;
-    grid-column-end: 20;
+    grid-column-end: 19;
     display: inline-block;
-    grid-row-start: 4;
+    grid-row-start: 5;
 }
 
-.studentHeader {
-    grid-column-start: 2;
-    grid-column-end: 5;
+.studentGradeAverage {
+    grid-row-start: 3;
+    grid-column-start: 13;
+    grid-column-end: 15;
     background-color: rgb(242, 242, 242);
     border-radius: 5px;
     text-align: center;
@@ -39,10 +49,14 @@
     border: solid black 1px;
 }
 
+.studentGradeAverage > p {
+    margin-top: 8%;
+}
+
 .viewTeachersButton {
     grid-column-start: 16;
     grid-column-end: 19;
-    grid-row-start: 10;
+    grid-row-start: 11;
 }
 
 .addStudentForm {
@@ -62,14 +76,42 @@
     padding-bottom: 5%;
 }
 
+.addStudentForm > form > button {
+    background-color: rgb(0,205,116);
+    border-radius: 5px;
+}
+
 .addStudentForm > form > input {
     margin-bottom: 10%;
+    width: 90%;
 }
 
 .studentTable > tbody > tr > td {
     padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 5%;
 }
 
-.headerTitle {
-    
+.studentTable > tbody > tr > td > button {
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    height: 130%;
+    box-shadow: 1px 1px;
+    color: white;
+}
+
+.viewTeachersButton {
+    background-color: rgb(0,149,210);
+    width: 55%;
+    height: 70%;
+    text-align: center;
+    padding-top: 5%;
+    border-radius: 5px;
+    border: solid white 2px;
+    color: ghostwhite; 
+}
+
+.studentColumnLabels > td {
+    font-size: 1.3em;
+    text-decoration: underline;
 }
