@@ -53,12 +53,6 @@
     margin-top: 8%;
 }
 
-.viewTeachersButton {
-    grid-column-start: 16;
-    grid-column-end: 19;
-    grid-row-start: 11;
-}
-
 .addStudentForm {
     border: solid black 1px;
     background-color: rgb(242, 242, 242);
@@ -108,10 +102,20 @@
     padding-top: 5%;
     border-radius: 5px;
     border: solid white 2px;
-    color: ghostwhite; 
+    color: ghostwhite;
+    grid-column-start: 16;
+    grid-column-end: 19;
+    grid-row-start: 12;
 }
 
 .studentColumnLabels > td {
     font-size: 1.3em;
+    text-decoration: underline;
+}
+
+.addStudentErrorMessage {
+    margin: 0;
+    margin-top: 7%;
+    color: red;
     text-decoration: underline;
 }

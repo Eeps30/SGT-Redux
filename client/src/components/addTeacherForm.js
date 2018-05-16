@@ -8,25 +8,29 @@ class AddTeacherForm extends Component {
         this.state = {
             name: '',
             course: '',
-            size: ''
+            size: '',
+            errorMessage: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleNameEntry(event){
         this.setState({
+            errorMessage: '',
             name: event.target.value
         })
     }
 
     handleCourseEntry(event){
         this.setState({
+            errorMessage: '',
             course: event.target.value
         })
     }
 
     handleSizeEntry(event){
         this.setState({
+            errorMessage: '',
             size: event.target.value
         })
     }
@@ -36,7 +40,12 @@ class AddTeacherForm extends Component {
 
         const { name, course, size } = this.state
 
-        //verify inputs before axios call
+        if( isNaN(this.state.grade) ){
+            this.setState({
+                errorMessage: 'Not a Valid Class Size'
+            })
+            return
+        }
 
         axios.post('http://localhost:8000/students/addteacher', {
             name: name,
@@ -72,6 +81,7 @@ class AddTeacherForm extends Component {
                         <input onChange={this.handleCourseEntry.bind(this)} name="course" placeholder="Course" type="text" value={this.state.course}/>
                         <input onChange={this.handleSizeEntry.bind(this)} name="class_size" placeholder="Class Size" type="text" value={this.state.size}/>
                         <button onClick={this.handleSubmit.bind(this)}>Add Teacher</button>
+                        <p className="addTeacherErrorMessage">{this.state.errorMessage}</p>
                     </form>
                 </div>
             </div>
