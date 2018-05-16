@@ -1,0 +1,165 @@
+@media only screen and (max-width: 1000px){
+    .addStudentContainer {
+        grid-column-start: 2;
+        grid-column-end: 10;
+        grid-row-start: 4;
+    }
+
+    .viewTeachersButton {
+        grid-column-start: 12;
+        grid-column-end: 17;
+        grid-row-start: 11;
+    }
+
+    .studentTable {
+        grid-row-start: 14;
+        grid-column-start: 2;
+        grid-column-end: 20;
+    }
+
+    .studentGradeAverage {
+        grid-row-start: 12;
+        grid-column-start: 16;
+        grid-column-end: 20;
+        height: 7vh;
+        width: 19vw;
+    }
+
+    .studentGradeAverage > p {
+        margin-top: 8%;
+        font-size: 2.5vmin;
+    }
+
+    .addStudentForm {
+        width: 68vw;
+    }
+
+    .addStudentForm > form {
+        height: 38vh;
+        width: 67vw;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .addStudentContainer {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        width: 50vw;
+    }
+    
+    .viewTeachersButton {
+        grid-column-start: 11;
+        grid-column-end: 16;
+        grid-row-start: 10;
+    }
+
+    .addStudentForm {
+        width: 65vw;
+        height: 47vh;
+    }
+
+    .addStudentForm > form {
+        height: 38vh;
+        width: 64vw;
+    }
+    
+    .studentGradeAverage {
+        grid-row-start: 11;
+        grid-column-start: 16;
+        grid-column-end: 20;
+        height: 4vh;
+        width: 19vw;
+    }
+
+    .studentTable {
+        grid-row-start: 13;
+        grid-column-start: 2;
+        grid-column-end: 20;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .addStudentContainer {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        width: 50vw;
+    }
+    
+    .studentGradeAverage {
+        grid-row-start: 12;
+        grid-column-start: 17;
+        grid-column-end: 20;
+        height: 7vh;
+        width: 14vw;
+    }
+
+    .studentTable {
+        grid-row-start: 14;
+        grid-column-start: 2;
+        grid-column-end: 20;
+    }
+}
+
+@media only screen and (max-width: 720px){
+    .addStudentContainer {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        width: 50vw;
+    }
+    
+    .studentGradeAverage {
+        grid-row-start: 11;
+        grid-column-start: 16;
+        grid-column-end: 20;
+        height: 5vh;
+        width: 19vw;
+    }
+
+    .studentTable {
+        grid-row-start: 13;
+        grid-column-start: 2;
+        grid-column-end: 20;
+    }
+
+    .studentGradeAverage > p {
+        font-size: 2vmin;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    .addStudentContainer {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        width: 50vw;
+    }
+
+    .addStudentForm {
+        width: 65vw;
+        height: 40vh;
+    }
+    
+    .studentGradeAverage {
+        grid-row-start: 9;
+        grid-column-start: 16;
+        grid-column-end: 20;
+        height: 7vh;
+        width: 19vw;
+    }
+
+    .studentTable {
+        grid-row-start: 11;
+        grid-column-start: 2;
+        grid-column-end: 20;
+    }
+
+    .studentGradeAverage > p {
+        font-size: 3vmin;
+    }
+
+    .viewTeachersButton {
+        grid-column-start: 10;
+        grid-column-end: 18;
+        grid-row-start: 9;
+        width: 21vw;
+    }
+}
