@@ -3,6 +3,7 @@ import AddTeacherForm from '../components/addTeacherForm';
 import { Link } from 'react-router-dom';
 import TeacherRow from './teacherRow';
 import '../css/teacherTable.css';
+import '../css/mediaQueryTeachers.css';
 import TeacherHeader from '../components/teacherHeader';
 
 class TeacherTable extends Component {

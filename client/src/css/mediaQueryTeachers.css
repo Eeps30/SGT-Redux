@@ -1,0 +1,151 @@
+@media only screen and (max-width: 1980px){
+    .addTeacherContainer {
+        grid-column-start: 16;
+        grid-column-end: 20;
+        grid-row-start: 4;
+    }
+
+    .addTeacherForm > form > input {
+        margin-bottom: 10%;
+        height: 3vh;
+        width: 92%;
+        font-size: 100%;
+    }
+
+    .addTeacherForm > form > button {
+        height: 5vh;
+    }
+
+    .viewStudentsButton {
+        grid-row-start: 13;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .addTeacherContainer {
+        grid-column-start: 16;
+        grid-column-end: 20;
+        grid-row-start: 4;
+    }
+
+    .addTeacherForm > form > input {
+        margin-bottom: 10%;
+        height: 3vh;
+        width: 92%;
+        font-size: 100%;
+    }
+
+    .viewStudentsButton {
+        grid-row-start: 12;
+    }
+}
+
+@media only screen and (max-width: 1240px){
+    .viewStudentsButton {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 1160px){
+
+}
+
+@media only screen and (max-width: 1140px){
+
+}
+
+@media only screen and (max-width: 1012px){
+    .viewStudentsButton {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .viewStudentsButton {
+        font-size: 0.8em;
+        grid-row-start: 10;
+        grid-column-start: 10;
+        grid-column-end: 14;
+    }
+
+    .teacherTable {
+        grid-row-start: 12;
+        grid-column-end: 20;
+    }
+
+    .addTeacherContainer {
+        grid-column-start: 2;
+        grid-column-end: 9;
+        grid-row-start: 4;
+    }
+
+    .addTeacherForm > form {
+        display: inline-grid;
+    }
+
+    .addTeacherForm > form > input {
+        width: 28vw;
+    }
+
+    .addTeacherForm > form > button {
+        width: 12vw;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .viewStudentsButton {
+        font-size: 0.8em;
+    width: 10vw;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    
+}
+
+@media only screen and (max-width: 743px){
+    .viewStudentsButton {
+        width: 12vw;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .addTeacherForm {
+        width: 42vw;
+    }
+
+    .viewStudentsButton {
+        grid-column-start: 12;
+        grid-column-end: 18;
+    }
+
+    .addTeacherForm > form > input{
+        width: 33vw;
+    }
+}
+
+@media only screen and (max-width: 620px){
+    .viewStudentsButton {
+        width: 16vw;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .addTeacherForm {
+        width: 52vw;
+    }
+
+    .addTeacherForm > form > input {
+        width: 45vw;
+    }
+
+    .addTeacherForm > form > button {
+        width: 22vw;
+    }
+
+    .viewStudentsButton {
+        width: 20vw;
+        grid-column-start: 14;
+        grid-column-end: 22;
+    }
+}
