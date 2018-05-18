@@ -1,20 +1,61 @@
+@media only screen and (max-width: 1980px){
+    .viewTeachersTab {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 3;
+    }
+
+    .studentGradeAverage {
+        width: 14vw;
+    }
+
+    .addStudentForm > form > input {
+        margin-bottom: 10%;
+        height: 3vh;
+        width: 92%;
+        font-size: 100%;
+    }
+
+    .viewStudentsButton {
+        grid-row-start: 3;
+    }
+}
+
 @media only screen and (max-width: 1240px){
-    .viewTeachersButton {
-        width: 67%;
+    .viewTeachersTab {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 3;
     }
 
     .studentGradeAverage {
         width: 12vw;
+    }
+
+    .addStudentForm > form > input {
+        margin-bottom: 10%;
+        height: 3vh;
+        width: 92%;
+        font-size: 100%;
     }
 }
 
 @media only screen and (max-width: 1160px){
-    .viewTeachersButton {
-        width: 67%;
+    .viewTeachersTab {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 3;
     }
 
     .studentGradeAverage {
-        width: 12vw;
+        width: 15vw;
+    }
+
+    .addStudentForm > form > input {
+        margin-bottom: 10%;
+        height: 3vh;
+        width: 92%;
+        font-size: 100%;
     }
 }
 
@@ -25,24 +66,18 @@
         grid-row-start: 4;
     }
 
-    .viewTeachersButton {
-        grid-column-start: 11;
-        grid-column-end: 16;
-        grid-row-start: 12;
-    }
-
     .studentTable {
-        grid-row-start: 14;
+        grid-row-start: 13;
         grid-column-start: 2;
         grid-column-end: 20;
     }
 
     .studentGradeAverage {
-        grid-row-start: 12;
-        grid-column-start: 16;
+        grid-row-start: 11;
+        grid-column-start: 9;
         grid-column-end: 20;
         height: 7vh;
-        width: 19vw;
+        width: 16vw;
     }
 
     .studentGradeAverage > p {
@@ -51,7 +86,8 @@
     }
 
     .addStudentForm {
-        width: 39vw;
+        width: 31vw;
+        height: 42vh;
     }
 
     .addStudentForm > form {
@@ -62,12 +98,26 @@
 
     .addStudentForm > form > input {
         margin-bottom: 5%;
-        width: 52%;
-        height: 5vh;
+        height: 3vh;
+        width: 40%;
+        font-size: 100%;
     }
 
     .addStudentForm > form > button {
         width: 12vw;
+    }
+
+    .viewTeachersTab {
+        grid-column-start: 16;
+        grid-column-end: 20;
+        grid-row-start: 12;
+    }
+
+    .viewStudentsButton {
+        font-size: 1em;
+        grid-row-start: 12;
+        grid-column-start: 13;
+        grid-column-end: 17;
     }
 }
 
@@ -95,8 +145,8 @@
     }
     
     .studentGradeAverage {
-        grid-row-start: 11;
-        grid-column-start: 16;
+        grid-row-start: 10;
+        grid-column-start: 11;
         grid-column-end: 20;
         height: 7vh;
         width: 19vw;
@@ -121,8 +171,8 @@
     }
     
     .studentGradeAverage {
-        grid-row-start: 11;
-        grid-column-start: 16;
+        grid-row-start: 10;
+        grid-column-start: 11;
         grid-column-end: 20;
         height: 7vh;
         width: 19vw;
@@ -143,11 +193,11 @@
     }
     
     .studentGradeAverage {
-        grid-row-start: 11;
-        grid-column-start: 16;
+        grid-row-start: 10;
+        grid-column-start: 11;
         grid-column-end: 20;
-        height: 5vh;
-        width: 19vw;
+        height: 6vh;
+        width: 21vw;
     }
 
     .studentTable {
@@ -169,11 +219,11 @@
     }
     
     .studentGradeAverage {
-        grid-row-start: 11;
-        grid-column-start: 16;
+        grid-row-start: 10;
+        grid-column-start: 11;
         grid-column-end: 20;
-        height: 5vh;
-        width: 19vw;
+        height: 6vh;
+        width: 26vw;
     }
 
     .studentTable {
@@ -183,7 +233,8 @@
     }
 
     .studentGradeAverage > p {
-        font-size: 2vmin;
+        font-size: 3vmin;
+        margin-top: 8%
     }
 
     .viewTeachersButton {
@@ -202,6 +253,11 @@
     .studentColumnLabels > td {
         font-size: 1em;
     }
+
+    .viewStudentsButton {
+        grid-column-start: 13;
+        grid-column-end: 17;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -217,16 +273,25 @@
         margin-top: 0;
     }
 
-    .viewTeachersButton {
-        grid-row-start: 9;
+    .viewTeachersTab {
+        height: 74%;
+        grid-column-start: 16;
+        grid-column-end: 22;
+        grid-row-start: 10;
     }
 
     .studentGradeAverage {
-        grid-row-start: 9;
+        grid-row-start: 8;
+        font-size: 3vmin;
+        margin-top: 0;
     }
 
     .studentTable {
         grid-row-start: 11;
+    }
+
+    .viewStudentsButton {
+        grid-row-start: 10;
     }
 }
 
@@ -243,7 +308,7 @@
     }
     
     .studentGradeAverage {
-        grid-row-start: 9;
+        grid-row-start: 8;
         grid-column-start: 14;
         grid-column-end: 20;
         height: 6vh;

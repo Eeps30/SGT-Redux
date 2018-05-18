@@ -24,7 +24,8 @@ class TeacherTable extends Component {
                     </tbody>
                 </table>
                 <AddTeacherForm/>
-                <Link className="btn viewStudentsButton" to="/">View Students</Link>
+                <Link className="btn viewStudentsButton" to="/">Students</Link>
+                <Link className="btn viewTeachersTab" to="/teacherTable">Teachers</Link>
             </div>
         )
     }

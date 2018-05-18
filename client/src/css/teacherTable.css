@@ -47,17 +47,36 @@
 }
 
 .viewStudentsButton {
-    grid-column-start: 16;
-    grid-column-end: 19;
-    grid-row-start: 11;
     background-color: rgb(0,149,210);
     width: 55%;
     height: 70%;
     text-align: center;
     padding-top: 5%;
-    border-radius: 5px;
-    border: solid white 2px;
-    color: ghostwhite; 
+    color: ghostwhite;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid #b3b0b0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; 
+}
+
+.viewTeachersTab {
+    background-color: rgb(0,149,210);
+    width: 55%;
+    height: 70%;
+    text-align: center;
+    padding-top: 5%;
+    color: ghostwhite;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid #b3b0b0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .addTeacherForm {

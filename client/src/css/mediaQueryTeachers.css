@@ -17,7 +17,7 @@
     }
 
     .viewStudentsButton {
-        grid-row-start: 13;
+        grid-row-start: 3;
     }
 }
 
@@ -36,13 +36,14 @@
     }
 
     .viewStudentsButton {
-        grid-row-start: 12;
+        grid-row-start: 3;
+        font-size: 1em;
     }
 }
 
 @media only screen and (max-width: 1240px){
     .viewStudentsButton {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
 
@@ -56,16 +57,16 @@
 
 @media only screen and (max-width: 1012px){
     .viewStudentsButton {
-        font-size: 0.8em;
+        font-size: 1em;
     }
 }
 
 @media only screen and (max-width: 1000px){
     .viewStudentsButton {
-        font-size: 0.8em;
-        grid-row-start: 10;
-        grid-column-start: 10;
-        grid-column-end: 14;
+        font-size: 1em;
+        grid-row-start: 11;
+        grid-column-start: 13;
+        grid-column-end: 17;
     }
 
     .teacherTable {
@@ -77,6 +78,10 @@
         grid-column-start: 2;
         grid-column-end: 9;
         grid-row-start: 4;
+    }
+
+    .viewTeachersTab {
+        grid-row-start: 11;
     }
 
     .addTeacherForm > form {
@@ -94,29 +99,37 @@
 
 @media only screen and (max-width: 900px){
     .viewStudentsButton {
-        font-size: 0.8em;
-    width: 10vw;
+        font-size: 1em;
+        width: 10vw;
     }
 }
 
 @media only screen and (max-width: 800px){
-    
+    .viewStudentsButton {
+        width: 55%;
+        height: 70%;
+    }
 }
 
 @media only screen and (max-width: 743px){
     .viewStudentsButton {
         width: 12vw;
+        height: 73%;
+        grid-column-start: 12;
+        grid-column-end: 17;
+    }
+
+    .viewTeachersTab {
+        height: 70%;;
+        grid-column-start: 15;
+        grid-column-end: 20;
+        grid-row-start: 11;
     }
 }
 
 @media only screen and (max-width: 700px){
     .addTeacherForm {
         width: 42vw;
-    }
-
-    .viewStudentsButton {
-        grid-column-start: 12;
-        grid-column-end: 18;
     }
 
     .addTeacherForm > form > input{
@@ -126,13 +139,35 @@
 
 @media only screen and (max-width: 620px){
     .viewStudentsButton {
-        width: 16vw;
+        width: 13vw;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .viewStudentsButton {
+        grid-row-start: 11;
+        grid-column-start: 14;
+        grid-column-end: 20;
+    }
+
+    .viewTeachersTab {
+        height: 74%;
+        grid-column-start: 17;
+        grid-column-end: 22;
+        grid-row-start: 11;
     }
 }
 
 @media only screen and (max-width: 500px){
     .addTeacherForm {
         width: 52vw;
+    }
+
+    .viewTeachersTab {
+        grid-column-start: 17;
+        grid-column-end: 24;
+        grid-row-start: 11;
+        width: 14vw;
     }
 
     .addTeacherForm > form > input {
@@ -144,8 +179,8 @@
     }
 
     .viewStudentsButton {
-        width: 20vw;
-        grid-column-start: 14;
-        grid-column-end: 22;
+        width: 16vw;
+        grid-column-start: 13;
+        grid-column-end: 20;
     }
 }

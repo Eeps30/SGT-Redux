@@ -16,15 +16,16 @@ class StudentTable extends Component {
                     <tbody>
                         <tr className="studentColumnLabels">
                             <td>Student Name</td>
-                            <td>Student Course</td>
-                            <td>Student Grade</td>
+                            <td>Course</td>
+                            <td>Grade</td>
                             <td>Operations</td>
                         </tr>
                         <StudentRow/>
                     </tbody>
                 </table>
                 <AddStudentForm/>
-                <Link className="btn viewTeachersButton" to="/teacherTable">View Teachers</Link>
+                <Link className="btn viewStudentsButton" to="/">Students</Link>
+                <Link className="btn viewTeachersTab" to="/teacherTable">Teachers</Link>
             </div>
         )
     }
