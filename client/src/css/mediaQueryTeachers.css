@@ -77,7 +77,7 @@
     .addTeacherContainer {
         grid-column-start: 2;
         grid-column-end: 9;
-        grid-row-start: 4;
+        grid-row-start: 3;
     }
 
     .viewTeachersTab {
@@ -99,16 +99,16 @@
 
 @media only screen and (max-width: 900px){
     .viewStudentsButton {
-        font-size: 1em;
-        width: 10vw;
+        height: 76%;
+    }
+
+    .viewTeachersTab {
+        height: 76%;
     }
 }
 
 @media only screen and (max-width: 800px){
-    .viewStudentsButton {
-        width: 55%;
-        height: 70%;
-    }
+
 }
 
 @media only screen and (max-width: 743px){
@@ -145,7 +145,7 @@
 
 @media only screen and (max-width: 600px){
     .viewStudentsButton {
-        grid-row-start: 11;
+        grid-row-start: 10;
         grid-column-start: 14;
         grid-column-end: 20;
     }
@@ -154,6 +154,10 @@
         height: 74%;
         grid-column-start: 17;
         grid-column-end: 22;
+        grid-row-start: 10;
+    }
+
+    .teacherTable {
         grid-row-start: 11;
     }
 }
@@ -166,7 +170,7 @@
     .viewTeachersTab {
         grid-column-start: 17;
         grid-column-end: 24;
-        grid-row-start: 11;
+        grid-row-start: 10;
         width: 14vw;
     }
 
