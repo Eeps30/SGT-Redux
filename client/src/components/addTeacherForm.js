@@ -40,7 +40,28 @@ class AddTeacherForm extends Component {
 
         const { name, course, size } = this.state
 
-        if( isNaN(this.state.grade) ){
+        if(name === ''){
+            this.setState({
+                errorMessage: 'Please Enter a Name'
+            })
+            return
+        }
+
+        if(course === ''){
+            this.setState({
+                errorMessage: 'Please Enter a Course'
+            })
+            return
+        }
+
+        if(size === ''){
+            this.setState({
+                errorMessage: 'Please Enter a Class Size'
+            })
+            return
+        }
+
+        if( isNaN(size) ){
             this.setState({
                 errorMessage: 'Not a Valid Class Size'
             })

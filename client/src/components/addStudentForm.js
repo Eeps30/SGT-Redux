@@ -40,7 +40,29 @@ class AddStudentForm extends Component {
 
         const { name, grade, course } = this.state
 
-        if( isNaN(this.state.grade) || this.state.grade > 100 ){
+        if(name === ''){
+            this.setState({
+                errorMessage: 'Please Enter a Name'
+            })
+            return
+        }
+
+        if(course === ''){
+            this.setState({
+                errorMessage: 'Please Enter a Course'
+            })
+            return
+        }
+
+        if(grade === ''){
+            this.setState({
+                errorMessage: 'Please Enter a Grade'
+            })
+            return
+        }
+        
+
+        if( isNaN(grade) || grade > 100 ){
             this.setState({
                 errorMessage: 'Not a Valid Grade'
             })
