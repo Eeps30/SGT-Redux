@@ -28,7 +28,8 @@ class StudentModal extends Component {
                 <Modal className="studentsModal" isOpen={this.state.isActive} onRequestClose={this.toggleModal}>
                     <div className="modalText">
                         <p>Are you sure you want to delete this student?</p>
-                        <button onClick={this.toggleModal}>Hide Modal</button>
+                        <button onClick={this.props.handleDelete}>Confirm Delete</button>
+                        <button onClick={this.toggleModal}>Cancel</button>
                     </div>
                 </Modal>
             </section>
@@ -37,5 +38,3 @@ class StudentModal extends Component {
 }
 
 export default StudentModal
-
-//repurpose the 'close modal' button to be delete axios button 

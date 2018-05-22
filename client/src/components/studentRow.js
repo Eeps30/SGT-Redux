@@ -12,6 +12,7 @@ class StudentRow extends Component {
 
     handleDelete(id){
         this.props.deleteStudent(id)
+        this.props.getStudentList()
     }
 
     render(){
@@ -25,7 +26,7 @@ class StudentRow extends Component {
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
                     <td>{item.grade}</td>
-                    <td><StudentModal/></td>
+                    <td><StudentModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
                 </tr>
             )
 
