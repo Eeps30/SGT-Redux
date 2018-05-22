@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getStudentList, deleteStudent } from '../components/actions'
+import StudentModal from './studentModal';
+
 
 class StudentRow extends Component {
     
@@ -23,7 +25,7 @@ class StudentRow extends Component {
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
                     <td>{item.grade}</td>
-                    <td><button onClick={this.handleDelete.bind(this, item.id)}>Delete</button></td>
+                    <td><StudentModal/></td>
                 </tr>
             )
 

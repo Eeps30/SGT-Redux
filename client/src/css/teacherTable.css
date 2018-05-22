@@ -149,3 +149,11 @@
     color: red;
     text-decoration: underline;
 }
+
+.teacherDeleteButton {
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    height: 35px;
+    box-shadow: 1px 1px;
+    color: white;
+}

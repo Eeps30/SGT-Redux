@@ -91,14 +91,6 @@
     padding-left: 5%;
 }
 
-.studentTable > tbody > tr > td > button {
-    background-color: rgb(255, 0, 0);
-    border-radius: 5px;
-    height: 35px;
-    box-shadow: 1px 1px;
-    color: white;
-}
-
 .viewTeachersTab {
     background-color: rgb(0,149,210);
     width: 55%;
@@ -124,4 +116,23 @@
     margin-top: 2%;
     color: red;
     text-decoration: underline;
+}
+
+.studentDeleteButton {
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    height: 35px;
+    box-shadow: 1px 1px;
+    color: white;
+}
+
+.studentsModal {
+    border: solid black 2px;
+    background-color: white;
+    height: 30vh;
+    width: 50vw;
+    margin: auto;
+    margin-top: 20vh;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
 }
