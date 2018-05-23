@@ -136,3 +136,22 @@
     border-radius: 5px;
     box-shadow: 2px 2px;
 }
+
+.studentModalText > p {
+    text-align: center;
+    font-size: 2em;
+}
+
+.modalDeleteStudent {
+    width: 50vw;
+    height: 7vh;
+    background-color: red;
+    color: white;
+}
+
+.modalStudentCancel {
+    width: 50vw;
+    height: 6vh;
+    background-color: white;
+    border: solid gainsboro 1px;
+}

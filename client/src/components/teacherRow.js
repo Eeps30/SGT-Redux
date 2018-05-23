@@ -9,8 +9,9 @@ class TeacherRow extends Component {
         this.props.getTeacherList()
     }
 
-    handleDelete(id){
-        this.props.deleteTeacher(id)
+    async handleDelete(id){
+        await this.props.deleteTeacher(id)
+        this.props.getTeacherList()
     }
 
     render(){
@@ -25,7 +26,7 @@ class TeacherRow extends Component {
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
                     <td>{item.class_size}</td>
-                    <td><TeacherModal/></td>
+                    <td><TeacherModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
                 </tr>
             )
 

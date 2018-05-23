@@ -157,3 +157,32 @@
     box-shadow: 1px 1px;
     color: white;
 }
+
+.teachersModal {
+    border: solid black 2px;
+    background-color: white;
+    height: 30vh;
+    width: 50vw;
+    margin: auto;
+    margin-top: 20vh;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+}
+
+.modalTeacherCancel {
+    width: 50vw;
+    height: 6vh;
+    background-color: white;
+    border: solid gainsboro 1px;
+}
+.modalDeleteTeacher {
+    width: 50vw;
+    height: 7vh;
+    background-color: red;
+    color: white;
+}
+
+.teacherModalText {
+    font-size: 2em;
+    text-align: center;
+}

@@ -20,13 +20,21 @@ class TeacherModal extends Component {
         })
     }
 
+    onDelete = (props) => {
+        this.props.handleDelete()
+        this.toggleModal()
+    }
+
     render() {
         return (
             <section>
                 <button className="teacherDeleteButton" onClick={this.toggleModal}>Delete</button>
-                <Modal isOpen={this.state.isActive} onRequestClose={this.toggleModal}>
-                    Hello From the Modal
-                    <button onClick={this.toggleModal}>Hide Modal</button>
+                <Modal className="teachersModal" isOpen={this.state.isActive} onRequestClose={this.toggleModal}>
+                    <div>
+                        <p className="teacherModalText">Are you sure you want to delete this teacher?</p>
+                        <button className="modalTeacherCancel" onClick={this.toggleModal}>Cancel</button>
+                        <button className="modalDeleteTeacher" onClick={this.onDelete}>Confirm Delete</button>
+                    </div>
                 </Modal>
             </section>
         )

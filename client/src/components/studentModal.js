@@ -31,10 +31,10 @@ class StudentModal extends Component {
             <section>
                 <button className="studentDeleteButton" onClick={this.toggleModal}>Delete</button>
                 <Modal className="studentsModal" isOpen={this.state.isActive} onRequestClose={this.toggleModal}>
-                    <div className="modalText">
+                    <div className="studentModalText">
                         <p>Are you sure you want to delete this student?</p>
-                        <button onClick={this.onDelete}>Confirm Delete</button>
-                        <button onClick={this.toggleModal}>Cancel</button>
+                        <button className="modalStudentCancel" onClick={this.toggleModal}>Cancel</button>
+                        <button className="modalDeleteStudent" onClick={this.onDelete}>Confirm Delete</button>
                     </div>
                 </Modal>
             </section>

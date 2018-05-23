@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { connect } from 'react-redux'
+import { getTeacherList } from '../components/actions'
 
 class AddTeacherForm extends Component {
     constructor(props){
@@ -75,7 +77,8 @@ class AddTeacherForm extends Component {
           })
 
           .then((response) => {
-            console.log(response);
+            
+            this.props.getTeacherList()
 
             this.setState({
                 name: '',
@@ -111,4 +114,10 @@ class AddTeacherForm extends Component {
     
 }
 
-export default AddTeacherForm
+function mapStateToProps(state){
+    return {
+        students: state.list.items
+    }
+}
+
+export default connect(mapStateToProps, {getTeacherList})(AddTeacherForm);
