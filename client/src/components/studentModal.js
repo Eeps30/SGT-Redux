@@ -20,6 +20,11 @@ class StudentModal extends Component {
         })
     }
 
+    onDelete = (props) => {
+        this.props.handleDelete()
+        this.toggleModal()
+    }
+
     render() {
 
         return (
@@ -28,7 +33,7 @@ class StudentModal extends Component {
                 <Modal className="studentsModal" isOpen={this.state.isActive} onRequestClose={this.toggleModal}>
                     <div className="modalText">
                         <p>Are you sure you want to delete this student?</p>
-                        <button onClick={this.props.handleDelete}>Confirm Delete</button>
+                        <button onClick={this.onDelete}>Confirm Delete</button>
                         <button onClick={this.toggleModal}>Cancel</button>
                     </div>
                 </Modal>

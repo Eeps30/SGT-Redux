@@ -10,8 +10,8 @@ class StudentRow extends Component {
         this.props.getStudentList()
     }
 
-    handleDelete(id){
-        this.props.deleteStudent(id)
+    async handleDelete(id){
+        await this.props.deleteStudent(id)
         this.props.getStudentList()
     }
 
