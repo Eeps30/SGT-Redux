@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getStudentList, deleteStudent } from '../components/actions'
-import StudentModal from './studentModal';
+import { getStudentList, deleteStudent, editStudent } from '../components/actions'
+import StudentModal from './studentModal'
+import StudentEditModal from './studentEditModal'
 
 
 class StudentRow extends Component {
@@ -12,6 +13,11 @@ class StudentRow extends Component {
 
     async handleDelete(id){
         await this.props.deleteStudent(id)
+        this.props.getStudentList()
+    }
+
+    async handleEdit(id, name, course_name, grade){
+        await this.props.editStudent(id, name, course_name, grade)
         this.props.getStudentList()
     }
 
@@ -26,6 +32,7 @@ class StudentRow extends Component {
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
                     <td>{item.grade}</td>
+                    <td><StudentEditModal handleEdit={this.handleEdit.bind(this, item.id)}/></td>
                     <td><StudentModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
                 </tr>
             )
@@ -44,4 +51,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {getStudentList, deleteStudent})(StudentRow);
+export default connect(mapStateToProps, {getStudentList, deleteStudent, editStudent})(StudentRow);

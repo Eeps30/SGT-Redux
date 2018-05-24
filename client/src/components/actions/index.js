@@ -40,3 +40,14 @@ export function deleteTeacher(id){
         payload: response
     }
 }
+
+export function editStudent(id, name, course, grade){
+    const response = axios.post('http://localhost:8000/students/edit', {
+        id, name, course, grade
+    })
+
+    return {
+        type: types.EDIT_SINGLE_STUDENT,
+        payload: response
+    }
+}

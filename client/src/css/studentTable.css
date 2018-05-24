@@ -39,7 +39,6 @@
 
 .studentGradeAverage {
     grid-row-start: 4;
-    grid-row-end: 6;
     grid-column-start: 16;
     grid-column-end: 19;
     background-color: rgb(242, 242, 242);
@@ -154,4 +153,15 @@
     height: 6vh;
     background-color: white;
     border: solid gainsboro 1px;
+}
+
+.addStudentFormButtons > button {
+    width: 6vw;
+    margin-right: 2vw;
+    height: 4vh;
+}
+
+.addStudentButton {
+    background-color: #00b500;
+    border-radius: 4px;
 }

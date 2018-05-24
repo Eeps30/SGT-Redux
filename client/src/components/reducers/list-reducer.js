@@ -16,6 +16,8 @@ export default function(state = DEFAULT_STATE, action){
             return {...state, singleItem: action.payload}
         case types.DELETE_SINGLE_TEACHER:
             return {...state, singleItem: action.payload}
+        case types.EDIT_SINGLE_STUDENT:
+            return {...state, singleItem: action.payload}
         default:
             return state;
     }

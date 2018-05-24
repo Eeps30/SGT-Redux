@@ -7,6 +7,8 @@
 
     .studentGradeAverage {
         width: 14vw;
+        grid-row-start: 4;
+        grid-row-end: 6;
     }
 
     .addStudentForm > form > input {
@@ -30,6 +32,8 @@
 
     .studentGradeAverage {
         width: 12vw;
+        grid-row-start: 4;
+        grid-row-end: 6;
     }
 
     .addStudentForm > form > input {
@@ -49,6 +53,8 @@
 
     .studentGradeAverage {
         width: 15vw;
+        grid-row-start: 4;
+        grid-row-end: 6;
     }
 
     .addStudentForm > form > input {
@@ -73,6 +79,7 @@
 
     .studentGradeAverage {
         grid-row-start: 10;
+        grid-row-end: 10;
         grid-column-start: 9;
         grid-column-end: 20;
         height: 7vh;
@@ -86,7 +93,7 @@
 
     .addStudentForm {
         width: 31vw;
-        height: 37vh;
+        height: 40vh;
     }
 
     .addStudentForm > form {
@@ -119,6 +126,10 @@
         grid-column-start: 13;
         grid-column-end: 17;
     }
+
+    .addStudentFormButtons > button {
+        width: 9vw;
+    }
 }
 
 @media only screen and (max-width: 900px){
@@ -126,6 +137,12 @@
         grid-column-start: 2;
         grid-row-start: 3;
         width: 50vw;
+    }
+
+    .addFormButtons > button {
+        width: 7vw;
+        margin-right: 2vw;
+        height: 4vh;
     }
     
     .viewTeachersButton {
@@ -165,6 +182,10 @@
     .studentGradeAverage > p {
         margin-top: 10%;
     }
+
+    .addStudentFormButtons > button {
+        width: 8vw;
+    }
 }
 
 @media only screen and (max-width: 800px){
@@ -173,7 +194,17 @@
         grid-row-start: 3;
         width: 50vw;
     }
+
+    .addStudentFormButtons > button {
+        width: 9vw;
+    }
     
+    .addFormButtons > button {
+        width: 8vw;
+        margin-right: 2vw;
+        height: 4vh;
+    }
+
     .studentGradeAverage {
         grid-row-start: 9;
         grid-column-start: 11;
@@ -205,6 +236,16 @@
         grid-row-start: 3;
         width: 50vw;
     }
+
+    .addStudentFormButtons > button {
+        width: 10vw;
+    }
+
+    .addFormButtons > button {
+        width: 8vw;
+        margin-right: 2vw;
+        height: 4vh;
+    }
     
     .studentGradeAverage {
         grid-row-start: 9;
@@ -230,6 +271,16 @@
         grid-column-start: 2;
         grid-row-start: 3;
         width: 50vw;
+    }
+
+    .addStudentFormButtons > button {
+        width: 11vw;
+    }
+
+    .addFormButtons > button {
+        width: 9vw;
+        margin-right: 2vw;
+        height: 4vh;
     }
     
     .studentGradeAverage {
@@ -278,6 +329,16 @@
         height: 33vh;
     }
 
+    .addStudentFormButtons > button {
+        width: 15vw;
+    }
+
+    .addFormButtons > button {
+        width: 11vw;
+        margin-right: 2vw;
+        height: 4vh;
+    }
+
     .addStudentForm > form {
         height: 26vh;
         width: 64vw;
@@ -321,6 +382,16 @@
         grid-column-start: 2;
         grid-row-start: 3;
         width: 50vw;
+    }
+
+    .addStudentFormButtons > button {
+        width: 15vw;
+    }
+
+    .addFormButtons > button {
+        width: 13vw;
+        margin-right: 2vw;
+        height: 4vh;
     }
 
     .addStudentForm {
@@ -374,12 +445,26 @@
         margin-top: 14%;
     }
 
+    .addFormButtons > button {
+        width: 17vw;
+        margin-right: 2vw;
+        height: 4vh;
+    }
+
     .viewTeachersButton {
         grid-column-start: 14;
         grid-column-end: 18;
         grid-row-start: 7;
         width: 23vw;
         font-size: 1.7vh;
+    }
+
+    .viewTeachersTab {
+        font-size: 0.8em;
+    }
+
+    .viewStudentsButton {
+        font-size: 0.8em;
     }
 
     .studentColumnLabels > td {
@@ -389,5 +474,13 @@
     .addStudentForm > form > button {
         margin-top: 0;
         height: 5vh;
+    }
+
+    .studentTable > tbody > tr > td {
+        font-size: .8em;
+    }
+
+    .addStudentFormButtons > button {
+        width: 17vw;
     }
 }

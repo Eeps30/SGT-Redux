@@ -69,6 +69,10 @@
         grid-column-end: 17;
     }
 
+    .addTeacherFormButtons > button {
+        width: 7vw;
+    }
+
     .teacherTable {
         grid-row-start: 12;
         grid-column-end: 20;
@@ -105,6 +109,10 @@
     .viewTeachersTab {
         height: 76%;
     }
+
+    .addTeacherFormButtons > button {
+        width: 8vw;
+    }
 }
 
 @media only screen and (max-width: 800px){
@@ -135,11 +143,19 @@
     .addTeacherForm > form > input{
         width: 33vw;
     }
+
+    .addTeacherFormButtons > button {
+        width: 9vw;
+    }
 }
 
 @media only screen and (max-width: 620px){
     .viewStudentsButton {
         width: 13vw;
+    }
+
+    .addTeacherFormButtons > button {
+        width: 10vw;
     }
 }
 
@@ -159,6 +175,12 @@
 
     .teacherTable {
         grid-row-start: 11;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .addTeacherFormButtons > button {
+        width: 13vw;
     }
 }
 
@@ -186,5 +208,31 @@
         width: 16vw;
         grid-column-start: 13;
         grid-column-end: 20;
+    }
+
+    .teacherColumnLabels > td {
+        font-size: 0.8em;
+    }
+
+    .teacherTable > tbody > tr > td {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .viewStudentsButton {
+        font-size: 0.8em;
+    }
+
+    .addTeacherFormButtons > button {
+        width: 16vw;
+    }
+
+    .viewTeachersTab {
+        font-size: 0.8em;
+    }
+
+    .teacherColumnLabels > td {
+        font-size: 0.8em;
     }
 }

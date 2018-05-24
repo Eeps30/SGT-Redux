@@ -186,3 +186,14 @@
     font-size: 2em;
     text-align: center;
 }
+
+.addTeacherFormButtons > button {
+    width: 6vw;
+    margin-right: 2vw;
+    height: 4vh;
+}
+
+.addTeacherButton {
+    background-color: #00b500;
+    border-radius: 4px;
+}

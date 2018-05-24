@@ -37,6 +37,15 @@ class AddStudentForm extends Component {
         })
     }
 
+    clearField(){
+        this.setState({
+            name: '',
+            course: '', 
+            grade: '',
+            errorMessage: ''
+        })
+    }
+
     handleSubmit(event){
         event.preventDefault();
 
@@ -105,7 +114,10 @@ class AddStudentForm extends Component {
                         <input onChange={this.handleNameEntry.bind(this)} name="name" placeholder="Name" type="text" value={this.state.name}/>
                         <input onChange={this.handleCourseEntry.bind(this)} name="course" placeholder="Course" type="text" value={this.state.course}/>
                         <input onChange={this.handleGradeEntry.bind(this)} name="grade" placeholder="Grade" type="text" value={this.state.grade}/>
-                        <button onClick={this.handleSubmit.bind(this)}>Add Student</button>
+                        <div className="addStudentFormButtons">
+                            <button className="addStudentButton" onClick={this.handleSubmit.bind(this)}>Add</button>
+                            <button className="cancelStudentButton" onClick={this.clearField.bind(this)}>Cancel</button>
+                        </div>
                         <p className="addStudentErrorMessage">{this.state.errorMessage}</p>
                     </form>
                 </div>
