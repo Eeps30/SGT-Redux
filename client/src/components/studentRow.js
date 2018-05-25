@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getStudentList, deleteStudent, editStudent } from '../components/actions'
+import { getStudentList, deleteStudent, editStudent, getSelectedStudentData } from '../components/actions'
 import StudentModal from './studentModal'
 import StudentEditModal from './studentEditModal'
 
@@ -53,4 +53,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {getStudentList, deleteStudent, editStudent})(StudentRow);
+export default connect(mapStateToProps, {getStudentList, deleteStudent, editStudent, getSelectedStudentData})(StudentRow);

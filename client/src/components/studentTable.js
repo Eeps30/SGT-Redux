@@ -3,7 +3,6 @@ import StudentRow from './studentRow';
 import Header from '../components/header';
 import AddStudentForm from '../components/addStudentForm';
 import { Link } from 'react-router-dom';
-import StudentModal from '../components/studentModal';
 import '../css/studentTable.css';
 import '../css/mediaQueryStudent.css';
 

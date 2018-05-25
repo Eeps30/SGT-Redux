@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Modal from 'react-modal'
+import { getSelectedStudentData } from '../components/actions'
+import { connect } from 'react-redux'
 
 class StudentEditModal extends Component {
     constructor(props){
@@ -105,4 +107,10 @@ class StudentEditModal extends Component {
     }
 }
 
-export default StudentEditModal
+function mapStateToProps(state){
+    return {
+        students: state.list.items
+    }
+}
+
+export default connect(mapStateToProps, {getSelectedStudentData})(StudentEditModal);

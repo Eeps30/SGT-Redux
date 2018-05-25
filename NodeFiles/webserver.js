@@ -40,6 +40,25 @@ app.get('/students', (req, res, next) => {
     })
 })
 
+//RETRIEVE SELECTED STUDENT DATA
+app.get('/selectedStudent', (req, res, next) => {
+    const { id } = req.body;
+
+    let query = 'SELECT * FROM ?? WHERE ?? = ?';
+    let inserts = ['student_data', 'id', id];
+    let sql = mysql.format(query, inserts);
+
+    connection.query(sql, (err, results, fields) => {
+        if(err) return next(err);
+
+        const output = {
+            success: true,
+            data: results
+        }
+        res.json(output);
+    })
+})
+
 //RETRIEVE TEACHER DATA
 app.get('/teachers', (req, res, next) => {
     let query = 'SELECT * FROM ?? WHERE status = 1';

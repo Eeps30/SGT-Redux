@@ -10,6 +10,17 @@ export function getStudentList(){
     }
 }
 
+export function getSelectedStudentData(id){
+    const response = axios.get('http://localhost:8000/selectedStudent',{
+        id
+    })
+
+    return {
+        type: types.GET_SELECTED_STUDENT_DATA,
+        payload: response
+    }
+}
+
 export function getTeacherList(){
     const response = axios.get('http://localhost:8000/teachers')
 
