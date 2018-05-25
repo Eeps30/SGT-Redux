@@ -152,6 +152,25 @@ app.post('/students/edit', (req, res, next) => {
     })
 })
 
+//EDIT TEACHER IN TABLE
+app.post('/teachers/edit', (req, res, next) => {
+    const { id, name, course_name, class_size } = req.body;
+
+    let query = 'UPDATE ?? SET ?? = ?, ?? = ?, ?? = ? WHERE ?? = ?'
+    let inserts = ['teacher_data', 'name', name, 'course_name', course_name, 'class_size', class_size, 'id', id]
+
+    let sql = mysql.format(query, inserts);
+    console.log('This is the formatted SQl', sql);
+    connection.query(sql, (err, results, fields) => {
+        if(err) return next(err)
+        const output = {
+            success: true,
+            data: results
+        }
+        res.json(output)
+    })
+})
+
 
 app.listen(PORT, () => {
     console.log("Server started on PORT: ", PORT);

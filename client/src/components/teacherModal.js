@@ -32,8 +32,10 @@ class TeacherModal extends Component {
                 <Modal className="teachersModal" isOpen={this.state.isActive} onRequestClose={this.toggleModal}>
                     <div>
                         <p className="teacherModalText">Are you sure you want to delete this teacher?</p>
-                        <button className="modalTeacherCancel" onClick={this.toggleModal}>Cancel</button>
-                        <button className="modalDeleteTeacher" onClick={this.onDelete}>Confirm Delete</button>
+                        <div className="deleteModalButtonContainer">
+                            <button className="modalTeacherCancel" onClick={this.toggleModal}>Cancel</button>
+                            <button className="modalDeleteTeacher" onClick={this.onDelete}>Delete</button>
+                        </div>
                     </div>
                 </Modal>
             </section>

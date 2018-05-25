@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import Modal from 'react-modal'
 
-class StudentEditModal extends Component {
+class TeacherEditModal extends Component {
     constructor(props){
         super(props)
 
         this.state = {
             isActive: false,
             name: '',
-            course: '',
-            grade: '',
+            course_name: '',
+            class_size: '',
             errorMessage: ''
         }
     }
@@ -27,14 +27,14 @@ class StudentEditModal extends Component {
 
     handleCourseEntry(event){
         this.setState({
-            course: event.target.value,
+            course_name: event.target.value,
             errorMessage: ''
         })
     }
 
-    handleGradeEntry(event){
+    handleSizeEntry(event){
         this.setState({
-            grade: event.target.value,
+            class_size: event.target.value,
             errorMessage: ''
         })
     }
@@ -47,7 +47,7 @@ class StudentEditModal extends Component {
 
     onEdit = (props) => {
         
-        const { name, course, grade } = this.state
+        const { name, course_name, class_size } = this.state
 
         if(name === ''){
             this.setState({
@@ -56,29 +56,29 @@ class StudentEditModal extends Component {
             return
         }
 
-        if(course === ''){
+        if(course_name === ''){
             this.setState({
                 errorMessage: 'Please Enter a Course'
             })
             return
         }
 
-        if(grade === ''){
+        if(class_size === ''){
             this.setState({
-                errorMessage: 'Please Enter a Grade'
+                errorMessage: 'Please Enter a Class Size'
             })
             return
         }
         
 
-        if( isNaN(grade) || grade > 100 ){
+        if( isNaN(class_size) || class_size > 100 ){
             this.setState({
-                errorMessage: 'Not a Valid Grade'
+                errorMessage: 'Not a Valid Class Size'
             })
             return
         }
 
-        this.props.handleEdit( name, course, grade )
+        this.props.handleEdit( name, course_name, class_size )
         this.toggleModal()
     }
 
@@ -87,17 +87,17 @@ class StudentEditModal extends Component {
         return (
             <section>
                 <button className="editButtonModal" onClick={this.toggleModal}>Edit</button>
-                <Modal className="studentsEditModal" isOpen={this.state.isActive} onRequestClose={this.toggleModal}>
-                    <div className="studentEditModalText">
+                <Modal className="teachersEditModal" isOpen={this.state.isActive} onRequestClose={this.toggleModal}>
+                    <div className="teachersEditModalText">
                         <p>Enter New Values</p>
                         <input onChange={this.handleNameEntry.bind(this)} name="name" placeholder="Name" type="text" value={this.state.name}/>
-                        <input onChange={this.handleCourseEntry.bind(this)} name="course" placeholder="Course" type="text" value={this.state.course}/>
-                        <input onChange={this.handleGradeEntry.bind(this)} name="grade" placeholder="Grade" type="text" value={this.state.grade}/>
+                        <input onChange={this.handleCourseEntry.bind(this)} name="course_name" placeholder="Course" type="text" value={this.state.course_name}/>
+                        <input onChange={this.handleSizeEntry.bind(this)} name="class_size" placeholder="Class Size" type="text" value={this.state.class_size}/>
                         <div className="editButtons">
-                            <button className="editCancel" onClick={this.toggleModal}>Cancel</button>
+                            <button onClick={this.toggleModal}>Cancel</button>
                             <button className="editConfirm" onClick={this.onEdit}>Confirm</button>
                         </div>
-                        <h2 className="editStudentErrorMessage">{this.state.errorMessage}</h2>
+                        <h2 className="editTeacherErrorMessage">{this.state.errorMessage}</h2>
                     </div>
                 </Modal>
             </section>
@@ -105,4 +105,4 @@ class StudentEditModal extends Component {
     }
 }
 
-export default StudentEditModal
+export default TeacherEditModal

@@ -51,3 +51,14 @@ export function editStudent(id, name, course, grade){
         payload: response
     }
 }
+
+export function editTeacher(id, name, course_name, class_size){
+    const response = axios.post('http://localhost:8000/teachers/edit', {
+        id, name, course_name, class_size
+    })
+
+    return {
+        type: types.EDIT_SINGLE_TEACHER,
+        payload: response
+    }
+}

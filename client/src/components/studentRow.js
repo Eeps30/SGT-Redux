@@ -32,8 +32,10 @@ class StudentRow extends Component {
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
                     <td>{item.grade}</td>
-                    <td><StudentEditModal handleEdit={this.handleEdit.bind(this, item.id)}/></td>
-                    <td><StudentModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
+                    <div className="operationsButtonsStudents">
+                        <td><StudentEditModal handleEdit={this.handleEdit.bind(this, item.id)}/></td>
+                        <td><StudentModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
+                    </div>
                 </tr>
             )
 

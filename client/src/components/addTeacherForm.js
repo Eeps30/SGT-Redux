@@ -37,7 +37,8 @@ class AddTeacherForm extends Component {
         })
     }
 
-    clearField(){
+    clearField(event){
+        event.preventDefault();
         this.setState({
             name: '',
             course: '', 
@@ -72,9 +73,9 @@ class AddTeacherForm extends Component {
             return
         }
 
-        if( isNaN(size) ){
+        if( isNaN(size) || size > 250 ){
             this.setState({
-                errorMessage: 'Not a Valid Class Size'
+                errorMessage: 'Size Must be between 0 and 250'
             })
             return
         }

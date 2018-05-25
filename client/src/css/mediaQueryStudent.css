@@ -130,6 +130,18 @@
     .addStudentFormButtons > button {
         width: 9vw;
     }
+
+    .studentsEditModal {
+        width: 32vw;
+    }
+
+    .studentEditModalText > input {
+        width: 20vw;
+    }
+
+    .editButtons > button {
+        width: 8vw;
+    }
 }
 
 @media only screen and (max-width: 900px){
@@ -264,6 +276,18 @@
     .studentGradeAverage > p {
         font-size: 2vmin;
     }
+
+    .studentsEditModal {
+        width: 40vw;
+    }
+
+    .studentEditModalText > input {
+        width: 30vw;
+    }
+
+    .editButtons > button {
+        width: 10vw;
+    }
 }
 
 @media only screen and (max-width: 700px){
@@ -375,6 +399,18 @@
     .viewStudentsButton {
         grid-row-start: 10;
     }
+
+    .studentsEditModal {
+        width: 50vw;
+    }
+
+    .studentEditModalText > input {
+        width: 40vw;
+    }
+
+    .editButtons > button {
+        width: 12vw;
+    }
 }
 
 @media only screen and (max-width: 520px){
@@ -436,6 +472,20 @@
 
     .addStudentForm > form > input {
         width: 70%;
+    }
+}
+
+@media only screen and (max-width: 462px){
+    .studentsEditModal {
+        width: 60vw;
+    }
+
+    .studentEditModalText > input {
+        width: 50vw;
+    }
+
+    .editButtons > button {
+        width: 18vw;
     }
 }
 

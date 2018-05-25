@@ -99,6 +99,14 @@
     .addTeacherForm > form > button {
         width: 12vw;
     }
+
+    .teachersEditModal {
+        width: 30vw;
+    }
+
+    .teachersEditModalText > input {
+        width: 20vw;
+    }
 }
 
 @media only screen and (max-width: 900px){
@@ -115,8 +123,14 @@
     }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 770px){
+    .teachersEditModal {
+        width: 40vw;
+    }
 
+    .teachersEditModalText > input {
+        width: 30vw;
+    }
 }
 
 @media only screen and (max-width: 743px){
@@ -178,6 +192,16 @@
     }
 }
 
+@media only screen and (max-width: 578px){
+    .teachersEditModal {
+        width: 50vw;
+    }
+
+    .teachersEditModalText > input {
+        width: 40vw;
+    }
+}
+
 @media only screen and (max-width: 540px){
     .addTeacherFormButtons > button {
         width: 13vw;
@@ -234,5 +258,13 @@
 
     .teacherColumnLabels > td {
         font-size: 0.8em;
+    }
+
+    .teachersEditModal {
+        width: 70vw;
+    }
+
+    .teachersEditModalText > input {
+        width: 60vw;
     }
 }

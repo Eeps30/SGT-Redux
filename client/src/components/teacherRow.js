@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getTeacherList, deleteTeacher } from '../components/actions'
+import { getTeacherList, deleteTeacher, editTeacher } from '../components/actions'
 import TeacherModal from '../components/teacherModal'
+import TeacherEditModal from './teacherEditModal'
 
 class TeacherRow extends Component {
     
@@ -11,6 +12,11 @@ class TeacherRow extends Component {
 
     async handleDelete(id){
         await this.props.deleteTeacher(id)
+        this.props.getTeacherList()
+    }
+
+    async handleEdit(id, name, course_name, grade){
+        await this.props.editTeacher(id, name, course_name, grade)
         this.props.getTeacherList()
     }
 
@@ -26,7 +32,10 @@ class TeacherRow extends Component {
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
                     <td>{item.class_size}</td>
-                    <td><TeacherModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
+                    <div className="operationsButtonsTeachers">
+                        <td><TeacherEditModal handleEdit={this.handleEdit.bind(this, item.id)}/></td>
+                        <td><TeacherModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
+                    </div>
                 </tr>
             )
 
@@ -44,4 +53,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {getTeacherList, deleteTeacher})(TeacherRow);
+export default connect(mapStateToProps, {getTeacherList, deleteTeacher, editTeacher})(TeacherRow);

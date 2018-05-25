@@ -97,6 +97,7 @@
 
 .addTeacherForm > form > input {
     margin-bottom: 10%;
+    min-height: 25px;
 }
 
 .addTeacherForm > form > button {
@@ -162,7 +163,7 @@
     border: solid black 2px;
     background-color: white;
     height: 30vh;
-    width: 50vw;
+    width: 30vw;
     margin: auto;
     margin-top: 20vh;
     border-radius: 5px;
@@ -170,16 +171,16 @@
 }
 
 .modalTeacherCancel {
-    width: 50vw;
+    margin-right: 1vw;
     height: 6vh;
-    background-color: white;
-    border: solid gainsboro 1px;
+    width: 5vw;
+    border-radius: 4px;
 }
 .modalDeleteTeacher {
-    width: 50vw;
-    height: 7vh;
-    background-color: red;
-    color: white;
+    margin-right: 1vw;
+    height: 6vh;
+    width: 5vw;
+    border-radius: 4px;
 }
 
 .teacherModalText {
@@ -191,9 +192,71 @@
     width: 6vw;
     margin-right: 2vw;
     height: 4vh;
+    min-height: 25px;
 }
 
 .addTeacherButton {
     background-color: #00b500;
     border-radius: 4px;
+}
+
+.teachersEditModal {
+    border: solid black 2px;
+    background-color: white;
+    height: 42vh;
+    width: 25vw;
+    margin: auto;
+    margin-top: 20vh;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+}
+
+.editButtons > button {
+    margin-right: 1vw;
+    height: 4vh;
+    border-radius: 4px;
+}
+
+.teachersEditModalText > p {
+    text-align: center;
+    font-size: 2em;
+}
+
+.teachersEditModalText > input {
+    width: 15vw;
+    display: block;
+    margin: auto;
+    margin-bottom: 7%;
+}
+
+.editConfirm {
+    background-color: #00b500;
+    margin-left: .5vw;
+}
+
+.editButtonModal {
+    background-color: rgb(101, 101, 101);
+    border-radius: 5px;
+    height: 35px;
+    box-shadow: 1px 1px;
+    color: white;
+}
+
+.operationsButtonsTeachers {
+    margin-left: 2.8vw;
+}
+
+.deleteModalButtonContainer {
+    text-align: center;
+}
+
+.modalDeleteTeacher {
+    background-color: #00b500;
+}
+
+.editTeacherErrorMessage{
+    font-size: 1em;
+    text-align: center;
+    color: red;
+    text-decoration: underline;
 }

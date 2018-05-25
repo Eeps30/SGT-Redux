@@ -37,7 +37,8 @@ class AddStudentForm extends Component {
         })
     }
 
-    clearField(){
+    clearField(event){
+        event.preventDefault();
         this.setState({
             name: '',
             course: '', 
@@ -75,7 +76,7 @@ class AddStudentForm extends Component {
 
         if( isNaN(grade) || grade > 100 ){
             this.setState({
-                errorMessage: 'Not a Valid Grade'
+                errorMessage: 'Grade Must be between 0 and 100'
             })
             return
         }
