@@ -219,7 +219,6 @@
 .editButtonModal {
     background-color: rgb(101, 101, 101);
     border-radius: 5px;
-    height: 35px;
     box-shadow: 1px 1px;
     color: white;
 }
@@ -233,4 +232,10 @@
     text-align: center;
     color: red;
     text-decoration: underline;
+}
+
+.editButtonModal {
+    height: 34px;
+    width: 38px;
+    font-size: 13px;
 }

@@ -21,6 +21,12 @@
     .viewStudentsButton {
         grid-row-start: 3;
     }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 1240px){
@@ -42,6 +48,12 @@
         width: 92%;
         font-size: 100%;
     }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 1160px){
@@ -62,6 +74,12 @@
         height: 3vh;
         width: 92%;
         font-size: 100%;
+    }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
     }
 }
 
@@ -142,6 +160,12 @@
     .editButtons > button {
         width: 8vw;
     }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 900px){
@@ -198,6 +222,12 @@
     .addStudentFormButtons > button {
         width: 8vw;
     }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 800px){
@@ -239,6 +269,12 @@
     .viewTeachersTab {
         width: 55%;
         height: 76%;
+    }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
     }
 }
 
@@ -287,6 +323,12 @@
 
     .editButtons > button {
         width: 10vw;
+    }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
     }
 }
 
@@ -345,6 +387,12 @@
     .viewStudentsButton {
         grid-column-start: 13;
         grid-column-end: 17;
+    }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
     }
 }
 
@@ -411,6 +459,12 @@
     .editButtons > button {
         width: 12vw;
     }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 520px){
@@ -473,6 +527,12 @@
     .addStudentForm > form > input {
         width: 70%;
     }
+
+    .editButtonModal {
+        height: 34px;
+        width: 38px;
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 462px){
@@ -486,6 +546,18 @@
 
     .editButtons > button {
         width: 18vw;
+    }
+
+    .studentDeleteButton {
+        height: 28px;
+        width: 43px;
+        font-size: 10px;
+    }
+
+    .editButtonModal {
+        height: 28px;
+        width: 33px;
+        font-size: 10px;
     }
 }
 

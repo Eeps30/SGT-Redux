@@ -2,12 +2,22 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getTeacherList, deleteTeacher, editTeacher } from '../components/actions'
 import TeacherModal from '../components/teacherModal'
-import TeacherEditModal from './teacherEditModal'
+import EditModal from '../components/editModal'
+// import TeacherEditModal from './teacherEditModal'
 
 class TeacherRow extends Component {
+    constructor(props){
+        super(props)
+
+        this.state = {
+            editModalIsActive: false,
+        }
+    }
     
-    componentDidMount() {
-        this.props.getTeacherList()
+    async componentDidMount() {
+        await this.props.getTeacherList()
+        console.log('Teachers List', this.props.teachers)
+
     }
 
     async handleDelete(id){
@@ -20,22 +30,27 @@ class TeacherRow extends Component {
         this.props.getTeacherList()
     }
 
+    toggleModal() {
+        this.setState({
+            editModalIsActive:!this.state.editModalIsActive,  
+        })
+    }
+
     render(){
-
-        const { students } = this.props
-        console.log('Teacher Row Component: ', students)
+        //1. click teacher tab, rows render => 2. call get teacher info, editmodals render => 3. render modal on a state change
+        const { teachers } = this.props
         
-        const itemElements = students.map((item, index) => {
-
+        const itemElements = teachers.map((item, index) => {
+            
             return (
                 <tr key={index}>
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
                     <td>{item.class_size}</td>
-                    <div className="operationsButtonsTeachers">
-                        <td><TeacherEditModal handleEdit={this.handleEdit.bind(this, item.id)}/></td>
-                        <td><TeacherModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
-                    </div>
+                    
+                    <EditModal className="teachersEditModal" teacherInfo={item} isOpen={this.state.editModalIsActive} onRequestClose={this.toggleModal}/>
+
+                    <td><TeacherModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
                 </tr>
             )
 
@@ -49,7 +64,7 @@ class TeacherRow extends Component {
 
 function mapStateToProps(state){
     return {
-        students: state.list.items
+        teachers: state.list.items
     }
 }
 

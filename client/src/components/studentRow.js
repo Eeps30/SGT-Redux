@@ -7,8 +7,8 @@ import StudentEditModal from './studentEditModal'
 
 class StudentRow extends Component {
     
-    componentDidMount() {
-        this.props.getStudentList()
+    async componentDidMount() {
+        await this.props.getStudentList()
     }
 
     async handleDelete(id){
@@ -33,7 +33,7 @@ class StudentRow extends Component {
                     <td>{item.course_name}</td>
                     <td>{item.grade}</td>
                     <div className="operationsButtonsStudents">
-                        <td><StudentEditModal handleEdit={this.handleEdit.bind(this, item.id)}/></td>
+                        <td><StudentEditModal handleEdit={this.handleEdit.bind(this, item.id)} studentName={item.name} studentCourse={item.course_name} studentGrade={item.grade}/></td>
                         <td><StudentModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
                     </div>
                 </tr>

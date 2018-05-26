@@ -243,6 +243,12 @@
     }
 }
 
+@media only screen and (max-width: 426px){
+    .teacherDeleteButton {
+        height: 28px;
+        font-size: 10px;
+    }
+}
 @media only screen and (max-width: 420px){
     .viewStudentsButton {
         font-size: 0.8em;
@@ -266,5 +272,11 @@
 
     .teachersEditModalText > input {
         width: 60vw;
+    }
+
+    .teacherDeleteButton {
+        height: 27px;
+        width: 42px;
+        font-size: 10px;
     }
 }

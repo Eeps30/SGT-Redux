@@ -18,6 +18,16 @@ class StudentEditModal extends Component {
 
     componentWillMount(){
         Modal.setAppElement('body')
+
+        const name = this.props.studentName
+        const course = this.props.studentCourse
+        const grade = this.props.studentGrade
+
+        this.setState({
+            name: name,
+            course: course,
+            grade: grade
+        })
     }
 
     handleNameEntry(event){
@@ -75,7 +85,7 @@ class StudentEditModal extends Component {
 
         if( isNaN(grade) || grade > 100 ){
             this.setState({
-                errorMessage: 'Not a Valid Grade'
+                errorMessage: 'Grade must be between 0 and 100'
             })
             return
         }
