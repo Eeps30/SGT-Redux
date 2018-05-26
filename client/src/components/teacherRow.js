@@ -2,22 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getTeacherList, deleteTeacher, editTeacher } from '../components/actions'
 import TeacherModal from '../components/teacherModal'
-import EditModal from '../components/editModal'
-// import TeacherEditModal from './teacherEditModal'
 
 class TeacherRow extends Component {
-    constructor(props){
-        super(props)
-
-        this.state = {
-            editModalIsActive: false,
-        }
-    }
     
     async componentDidMount() {
         await this.props.getTeacherList()
-        console.log('Teachers List', this.props.teachers)
-
     }
 
     async handleDelete(id){
@@ -30,14 +19,12 @@ class TeacherRow extends Component {
         this.props.getTeacherList()
     }
 
-    toggleModal() {
-        this.setState({
-            editModalIsActive:!this.state.editModalIsActive,  
-        })
+    editClicked = (id) => {
+        this.props.editClickHandler(id);
     }
 
     render(){
-        //1. click teacher tab, rows render => 2. call get teacher info, editmodals render => 3. render modal on a state change
+
         const { teachers } = this.props
         
         const itemElements = teachers.map((item, index) => {
@@ -47,8 +34,7 @@ class TeacherRow extends Component {
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
                     <td>{item.class_size}</td>
-                    
-                    <EditModal className="teachersEditModal" teacherInfo={item} isOpen={this.state.editModalIsActive} onRequestClose={this.toggleModal}/>
+                    <button className="editButtonModal" onClick={this.editClicked.bind(this, item.id)}>Edit</button>
 
                     <td><TeacherModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
                 </tr>

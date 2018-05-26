@@ -6,7 +6,6 @@ class EditModal extends Component {
         super(props)
 
         this.state = {
-            editModalIsActive: false,
             name: '',
             course_name: '',
             class_size: '',
@@ -14,11 +13,12 @@ class EditModal extends Component {
         }
     }
 
-    componentDidMount(){
+    componentWillReceiveProps(){
+        const {name, course_name, class_size } = this.props.teacherInfo
         this.setState({
-            name: this.props.teacherInfo.name,
-            course_name: this.props.teacherInfo.course_name,
-            class_size: this.props.teacherInfo.class_size
+            name, 
+            course_name, 
+            class_size
         })
     }
 
@@ -43,19 +43,10 @@ class EditModal extends Component {
         })
     }
 
-    toggleModal() {
-        this.setState({
-            editModalIsActive:!this.state.editModalIsActive,  
-        })
-    }
-
     render(){
 
         return (
-            <React.Fragment>
-
-            <button className="editButtonModal" onClick={this.toggleModal.bind(this)}>Edit</button>
-            <Modal className="teachersEditModal" isOpen={this.state.editModalIsActive} onRequestClose={this.toggleModal}>
+            <Modal className="teachersEditModal" isOpen={this.props.editIsOpen} onRequestClose={this.props.toggleModal}>
                 <div className="teachersEditModalText">
                     <p>Enter New Values</p>
                     <input onChange={this.handleNameEntry.bind(this)} name="name" placeholder="Name" type="text" value={this.state.name}/>
@@ -68,8 +59,6 @@ class EditModal extends Component {
                     <h2 className="editTeacherErrorMessage">{this.state.errorMessage}</h2>
                 </div>
             </Modal>
-
-            </React.Fragment>
         )
     }
 }
