@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import AddTeacherForm from '../components/addTeacherForm';
-import { Link } from 'react-router-dom';
-import TeacherRow from './teacherRow';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { getTeacherList } from '../components/actions'
-import '../css/teacherTable.css';
-import '../css/mediaQueryTeachers.css';
-import TeacherHeader from '../components/teacherHeader';
-import EditModal from '../components/editModal';
+import { getTeacherList, editTeacher } from '../components/actions'
+import AddTeacherForm from '../components/addTeacherForm'
+import TeacherRow from './teacherRow'
+import TeacherHeader from '../components/teacherHeader'
+import EditTeacherModal from '../components/editTeacherModal'
+import '../css/teacherTable.css'
+import '../css/mediaQueryTeachers.css'
 
 class TeacherTable extends Component {
     constructor(props){
@@ -19,7 +19,8 @@ class TeacherTable extends Component {
             modalProps: {
                 name: '',
                 course_name: '',
-                class_size: ''
+                class_size: '',
+                id: ''
             }
         }
 
@@ -45,20 +46,27 @@ class TeacherTable extends Component {
             return teacher.id===id
         })
 
-        console.log(newModalProps);
-
         await this.setState({
             modalProps: {
                 name: newModalProps.name,
                 course_name: newModalProps.course_name,
-                class_size: newModalProps.class_size
+                class_size: newModalProps.class_size,
+                id: newModalProps.id
             }
         })
 
         this.toggleModal();
     }
 
+    async handleEdit(id, name, course_name, class_size){
+        await this.props.editTeacher(id, name, course_name, class_size)
+        this.props.getTeacherList()
+    }
+
     render(){
+
+        const { id } = this.state.modalProps
+
         return(
             <React.Fragment>
             <div className="teacherContainer">
@@ -78,7 +86,7 @@ class TeacherTable extends Component {
                 <Link className="btn viewStudentsButton" to="/">Students</Link>
                 <Link className="btn viewTeachersTab" to="/teacherTable">Teachers</Link>
             </div>
-            <EditModal className="teachersEditModal" teacherInfo={this.state.modalProps} editIsOpen={this.state.editModalIsActive} toggleModal={this.toggleModal.bind(this)}/>
+            <EditTeacherModal className="teachersEditModal" handleEdit={this.handleEdit.bind(this)} teacherInfo={this.state.modalProps} editIsOpen={this.state.editModalIsActive} toggleModal={this.toggleModal.bind(this)}/>
             </React.Fragment>
         )
     }
@@ -90,7 +98,7 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, { getTeacherList })(TeacherTable);
+export default connect(mapStateToProps, { getTeacherList, editTeacher })(TeacherTable)
 
 
     //1. have here a state with the teachers array

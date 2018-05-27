@@ -14,20 +14,6 @@ class TeacherEditModal extends Component {
         }
     }
 
-    // componentDidMount(){
-    //     Modal.setAppElement('body')
-
-    //     const name = this.props.teacherName
-    //     const course_name = this.props.teacherCourse
-    //     const class_size = this.props.teacherClass
-
-    //     this.setState({
-    //         name: name,
-    //         course_name: course_name,
-    //         class_size: class_size
-    //     })
-    // }
-
     handleNameEntry(event){
         this.setState({
             name: event.target.value,
