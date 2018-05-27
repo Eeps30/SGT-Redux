@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getStudentList, deleteStudent, editStudent, getSelectedStudentData } from '../components/actions'
 import StudentModal from './studentModal'
-import StudentEditModal from './studentEditModal'
 
 
 class StudentRow extends Component {
@@ -16,14 +15,14 @@ class StudentRow extends Component {
         this.props.getStudentList()
     }
 
-    async handleEdit(id, name, course_name, grade){
-        await this.props.editStudent(id, name, course_name, grade)
-        this.props.getStudentList()
+    editClicked = (id) => {
+        this.props.editClickHandler(id);
     }
 
     render(){
 
         const { students } = this.props
+        console.log('students:', students)
         
         const itemElements = students.map((item, index) => {
 
@@ -32,10 +31,8 @@ class StudentRow extends Component {
                     <td>{item.name}</td>
                     <td>{item.course_name}</td>
                     <td>{item.grade}</td>
-                    <div className="operationsButtonsStudents">
-                        <td><StudentEditModal handleEdit={this.handleEdit.bind(this, item.id)} studentName={item.name} studentCourse={item.course_name} studentGrade={item.grade}/></td>
-                        <td><StudentModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
-                    </div>
+                    <button className="editButtonModal" onClick={this.editClicked.bind(this, item.id)}>Edit</button>
+                    <td><StudentModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
                 </tr>
             )
 

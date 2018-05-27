@@ -35,7 +35,6 @@ class TeacherRow extends Component {
                     <td>{item.course_name}</td>
                     <td>{item.class_size}</td>
                     <button className="editButtonModal" onClick={this.editClicked.bind(this, item.id)}>Edit</button>
-
                     <td><TeacherModal handleDelete={this.handleDelete.bind(this, item.id)}/></td>
                 </tr>
             )

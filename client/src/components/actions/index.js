@@ -52,9 +52,9 @@ export function deleteTeacher(id){
     }
 }
 
-export function editStudent(id, name, course, grade){
+export function editStudent(id, name, grade, course_name){
     const response = axios.post('http://localhost:8000/students/edit', {
-        id, name, course, grade
+        id, name, grade, course_name
     })
 
     return {

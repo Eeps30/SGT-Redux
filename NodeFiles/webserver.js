@@ -154,10 +154,10 @@ app.post('/teachers/delete', (req, res, next) => {
 
 //EDIT STUDENT IN TABLE
 app.post('/students/edit', (req, res, next) => {
-    const { id, name, course, grade } = req.body;
+    const { id, name, grade, course_name } = req.body;
 
     let query = 'UPDATE ?? SET ?? = ?, ?? = ?, ?? = ? WHERE ?? = ?'
-    let inserts = ['student_data', 'name', name, 'course_name', course, 'grade', grade, 'id', id]
+    let inserts = ['student_data', 'name', name, 'course_name', course_name, 'grade', grade, 'id', id]
 
     let sql = mysql.format(query, inserts);
     console.log('This is the formatted SQl', sql);

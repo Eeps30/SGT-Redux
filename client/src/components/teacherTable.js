@@ -42,7 +42,10 @@ class TeacherTable extends Component {
     }
 
     async editClicked(id) {
-        let newModalProps = this.state.teachersArray.find( function(teacher){
+        await this.props.getTeacherList();
+        const { teachers } = this.props
+
+        let newModalProps = this.props.teachers.find( function(teacher){
             return teacher.id===id
         })
 
@@ -64,8 +67,6 @@ class TeacherTable extends Component {
     }
 
     render(){
-
-        const { id } = this.state.modalProps
 
         return(
             <React.Fragment>
@@ -99,9 +100,3 @@ function mapStateToProps(state){
 }
 
 export default connect(mapStateToProps, { getTeacherList, editTeacher })(TeacherTable)
-
-
-    //1. have here a state with the teachers array
-    //2. render an edit button for each row, each with an id matching the teacher in the array
-    //3. when edit button is clicked, it renders the modal and passes in the props it needs
-    //4. that modal contains the function from redux that will pass the new edited information to the db
