@@ -27,13 +27,23 @@ class StudentTable extends Component {
         this.editClicked = this.editClicked.bind(this)
     }
 
-    async componentDidMount() {
-        await this.props.getStudentList()
-        const { students } = this.props
-        console.log('Students List: ', students)
-        this.setState({
-            studentsArray: students
-        })
+    // async componentDidMount() {
+    //     await this.props.getStudentList()
+    //     const { students } = this.props
+    //     console.log('Students List: ', students)
+    //     this.setState({
+    //         studentsArray: students
+    //     })
+    // }
+
+    componentDidMount(){
+        const url = 'http://localhost:3307/lfz/sgt-react/client/src/assets/php/getStudentsList.php'
+        axios.get(url).then(resp => {            
+                console.log(resp)
+            }).catch(err => {
+                console.log('error is: ', err);                
+            }
+        );
     }
 
     toggleModal() {
