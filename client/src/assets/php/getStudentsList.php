@@ -1,5 +1,6 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
 require_once('mysql_credentials.php');
 
 $query = "SELECT * FROM student_data WHERE status = 1";
@@ -18,7 +19,7 @@ if($result){
         //query returned data
         $output['success'] = true;
         while($row = mysqli_fetch_assoc($result)){
-            $output['tasks'][] = $row;
+            $output['students'][] = $row;
         }
     } else {
         //there was no data in the query

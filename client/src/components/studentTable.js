@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import '../css/studentTable.css'
 import '../css/mediaQueryStudent.css'
 import EditStudentModal from '../components/editStudentModal'
+import axios from 'axios'
 
 class StudentTable extends Component {
     constructor(props){
@@ -37,9 +38,9 @@ class StudentTable extends Component {
     // }
 
     componentDidMount(){
-        const url = 'http://localhost:3307/lfz/sgt-react/client/src/assets/php/getStudentsList.php'
+        const url = 'http://localhost:8080/lfz/sgt-react/client/src/assets/php/getStudentsList.php'
         axios.get(url).then(resp => {            
-                console.log(resp)
+                console.log('Axios response: ', resp.data.students)
             }).catch(err => {
                 console.log('error is: ', err);                
             }
