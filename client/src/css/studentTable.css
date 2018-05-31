@@ -87,8 +87,8 @@
 
 .studentTable > tbody > tr > td {
     padding-bottom: 2%;
-    padding-top: 2%;
-    padding-left: 5%;
+    padding-top: 1%;
+    padding-left: 10%;
 }
 
 .viewTeachersTab {
@@ -124,6 +124,8 @@
     height: 35px;
     box-shadow: 1px 1px;
     color: white;
+    position: relative;
+    right: 225%;
 }
 
 .studentsModal {
@@ -221,6 +223,11 @@
     border-radius: 5px;
     box-shadow: 1px 1px;
     color: white;
+    margin-top: 5%;
+    margin-left: 43%;
+    height: 34px;
+    width: 38px;
+    font-size: 13px;
 }
 
 .operationsButtonsStudents {
@@ -232,10 +239,4 @@
     text-align: center;
     color: red;
     text-decoration: underline;
-}
-
-.editButtonModal {
-    height: 34px;
-    width: 38px;
-    font-size: 13px;
 }

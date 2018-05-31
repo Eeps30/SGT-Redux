@@ -111,7 +111,7 @@
 
     .addStudentForm {
         width: 31vw;
-        height: 40vh;
+        height: 35vh;
     }
 
     .addStudentForm > form {
@@ -189,7 +189,7 @@
 
     .addStudentForm {
         width: 38vw;
-        height: 37vh;
+        height: 35vh;
     }
 
     .viewStudentsButton {
@@ -398,7 +398,7 @@
 
 @media only screen and (max-width: 600px){
     .addStudentForm {
-        height: 33vh;
+        height: 32vh;
     }
 
     .addStudentFormButtons > button {
@@ -486,7 +486,7 @@
 
     .addStudentForm {
         width: 50vw;
-        height: 33vh;
+        height: 32vh;
     }
     
     .studentGradeAverage {
@@ -529,6 +529,8 @@
     }
 
     .editButtonModal {
+        margin-top: 7%;
+        margin-left: 15%;
         height: 34px;
         width: 38px;
         font-size: 13px;
