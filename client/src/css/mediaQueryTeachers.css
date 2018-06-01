@@ -19,6 +19,23 @@
     .viewStudentsButton {
         grid-row-start: 3;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 160px;
+    }
+    
+    .editButtonModal {
+        margin-top: 5%;
+        margin-left: 24%;
+    }
+}
+
+@media only screen and (max-width: 1500px){
+    .teacherDeleteButton {
+        position: relative;
+        right: 120px;
+    }
 }
 
 @media only screen and (max-width: 1300px){
@@ -39,20 +56,53 @@
         grid-row-start: 3;
         font-size: 1em;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 95px;
+        bottom: 8px;
+    }
+    
+    .editButtonModal {
+        margin-top: 5%;
+        margin-left: 38%;
+    }
 }
 
 @media only screen and (max-width: 1240px){
     .viewStudentsButton {
         font-size: 1em;
     }
-}
 
-@media only screen and (max-width: 1160px){
+    .teacherDeleteButton {
+        position: relative;
+        right: 90px;
+        bottom: 6px;
+    }
+    
+    .editButtonModal {
+        margin-top: 5%;
+        margin-left: 28%;
+    }
 
-}
+    .teachersModal {
+        width: 44vw;
+        height: 18vh;
+    }
 
-@media only screen and (max-width: 1140px){
+    .teacherModalText {
+        font-size: 1.5em;
+    }
 
+    .modalTeacherCancel {
+        height: 4vh;
+        width: 10vw;
+    }
+
+    .modalDeleteTeacher {
+        height: 4vh;
+        width: 10vw;
+    }
 }
 
 @media only screen and (max-width: 1012px){
@@ -107,6 +157,36 @@
     .teachersEditModalText > input {
         width: 20vw;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 105px;
+        bottom: 9px;
+    }
+
+    .editButtonModal {
+        margin-top: 5%;
+        margin-left: 28%;
+    }
+
+    .teachersModal {
+        width: 60vw;
+        height: 18vh;
+    }
+
+    .teacherModalText {
+        font-size: 1.5em;
+    }
+
+    .modalTeacherCancel {
+        height: 4vh;
+        width: 21vw;
+    }
+
+    .modalDeleteTeacher {
+        height: 4vh;
+        width: 20vw;
+    }
 }
 
 @media only screen and (max-width: 900px){
@@ -121,6 +201,36 @@
     .addTeacherFormButtons > button {
         width: 8vw;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 75px;
+        bottom: 7px;
+    }
+
+    .editButtonModal {
+        margin-top: 5%;
+        margin-left: 28%;
+    }
+
+    .teachersModal {
+        width: 60vw;
+        height: 18vh;
+    }
+
+    .teacherModalText {
+        font-size: 1.5em;
+    }
+
+    .modalTeacherCancel {
+        height: 4vh;
+        width: 21vw;
+    }
+
+    .modalDeleteTeacher {
+        height: 4vh;
+        width: 20vw;
+    }
 }
 
 @media only screen and (max-width: 770px){
@@ -130,6 +240,17 @@
 
     .teachersEditModalText > input {
         width: 30vw;
+    }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 75px;
+        bottom: 7px;
+    }
+
+    .editButtonModal {
+        margin-top: 5%;
+        margin-left: 28%;
     }
 }
 
@@ -147,6 +268,16 @@
         grid-column-end: 20;
         grid-row-start: 11;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 75px;
+    }
+
+    .editButtonModal {
+        margin-top: 5%;
+        margin-left: 28%;
+    }
 }
 
 @media only screen and (max-width: 700px){
@@ -161,6 +292,36 @@
     .addTeacherFormButtons > button {
         width: 9vw;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 62px;
+        bottom: 7px;
+    }
+
+    .editButtonModal {
+        margin-top: 5%;
+        margin-left: 28%;
+    }
+
+    .teachersModal {
+        width: 60vw;
+        height: 20vh;
+    }
+
+    .teacherModalText {
+        font-size: 1.5em;
+    }
+
+    .modalTeacherCancel {
+        height: 4vh;
+        width: 21vw;
+    }
+
+    .modalDeleteTeacher {
+        height: 4vh;
+        width: 20vw;
+    }
 }
 
 @media only screen and (max-width: 620px){
@@ -170,6 +331,17 @@
 
     .addTeacherFormButtons > button {
         width: 10vw;
+    }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 62px;
+        bottom: 5px;
+    }
+
+    .editButtonModal {
+        margin-top: 5%;
+        margin-left: 28%;
     }
 }
 
@@ -190,6 +362,36 @@
     .teacherTable {
         grid-row-start: 11;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 62px;
+        bottom: 4px;
+    }
+
+    .editButtonModal {
+        margin-top: 8%;
+        margin-left: 18%;
+    }
+
+    .teachersModal {
+        width: 60vw;
+        height: 20vh;
+    }
+
+    .teacherModalText {
+        font-size: 1.5em;
+    }
+
+    .modalTeacherCancel {
+        height: 4vh;
+        width: 21vw;
+    }
+
+    .modalDeleteTeacher {
+        height: 4vh;
+        width: 20vw;
+    }
 }
 
 @media only screen and (max-width: 578px){
@@ -200,11 +402,32 @@
     .teachersEditModalText > input {
         width: 40vw;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 62px;
+    }
+
+    .editButtonModal {
+        margin-top: 8%;
+        margin-left: 18%;
+    }
 }
 
 @media only screen and (max-width: 540px){
     .addTeacherFormButtons > button {
         width: 13vw;
+    }
+
+    .editButtonModal {
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 62px;
+        bottom: 8px;
     }
 }
 
@@ -240,6 +463,31 @@
 
     .teacherTable > tbody > tr > td {
         font-size: 0.8em;
+    }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 48px;
+        bottom: 8px;
+    }
+
+    .teachersModal {
+        width: 60vw;
+        height: 20vh;
+    }
+
+    .teacherModalText {
+        font-size: 1.5em;
+    }
+
+    .modalTeacherCancel {
+        height: 4vh;
+        width: 21vw;
+    }
+
+    .modalDeleteTeacher {
+        height: 4vh;
+        width: 20vw;
     }
 }
 
@@ -278,5 +526,27 @@
         height: 27px;
         width: 42px;
         font-size: 10px;
+        position: relative;
+        right: 43px;
+        bottom: 5px;
+    }
+
+    .teachersModal {
+        width: 60vw;
+        height: 22vh;
+    }
+
+    .teacherModalText {
+        font-size: 1.5em;
+    }
+
+    .modalTeacherCancel {
+        height: 4vh;
+        width: 21vw;
+    }
+
+    .modalDeleteTeacher {
+        height: 4vh;
+        width: 20vw;
     }
 }

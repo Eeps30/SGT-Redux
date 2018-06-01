@@ -34,7 +34,7 @@ class StudentModal extends Component {
                     <div className="studentModalText">
                         <p>Are you sure you want to delete this student?</p>
                         <button className="modalStudentCancel" onClick={this.toggleModal}>Cancel</button>
-                        <button className="modalDeleteStudent" onClick={this.onDelete}>Confirm</button>
+                        <button className="modalDeleteStudent" onClick={this.onDelete}>Delete</button>
                     </div>
                 </Modal>
             </section>

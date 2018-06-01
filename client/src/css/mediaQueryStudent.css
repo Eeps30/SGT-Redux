@@ -26,6 +26,7 @@
         height: 34px;
         width: 38px;
         font-size: 13px;
+        margin-left: 38%;
     }
 }
 
@@ -80,6 +81,8 @@
         height: 34px;
         width: 38px;
         font-size: 13px;
+        margin-top: 4%;
+        margin-left: 40%;
     }
 }
 
@@ -275,6 +278,8 @@
         height: 34px;
         width: 38px;
         font-size: 13px;
+        margin-top: 4%;
+        margin-left: 36%;
     }
 }
 
@@ -394,6 +399,11 @@
         width: 38px;
         font-size: 13px;
     }
+
+    .studentDeleteButton {
+        position: relative;
+        right: 160%;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -465,6 +475,11 @@
         width: 38px;
         font-size: 13px;
     }
+
+    .studentDeleteButton {
+        position: relative;
+        right: 160%;
+    }
 }
 
 @media only screen and (max-width: 520px){
@@ -529,8 +544,8 @@
     }
 
     .editButtonModal {
-        margin-top: 7%;
-        margin-left: 15%;
+        margin-top: 3%;
+        margin-left: 5%;
         height: 34px;
         width: 38px;
         font-size: 13px;
@@ -554,6 +569,8 @@
         height: 28px;
         width: 43px;
         font-size: 10px;
+        position: relative;
+        right: 182%;
     }
 
     .editButtonModal {
