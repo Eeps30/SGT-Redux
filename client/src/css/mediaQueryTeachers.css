@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1980px){
     .addTeacherContainer {
-        grid-column-start: 16;
-        grid-column-end: 20;
+        grid-column-start: 14;
+        grid-column-end: 18;
         grid-row-start: 4;
     }
 
@@ -22,26 +22,38 @@
 
     .teacherDeleteButton {
         position: relative;
-        right: 160px;
+        right: 105px;
+        bottom: 7px;
     }
     
     .editButtonModal {
-        margin-top: 5%;
-        margin-left: 24%;
+        margin-top: 6%;
+        margin-left: 30%;
+    }
+
+    .studentTable {
+        grid-column-start: 3;
+        grid-column-end: 13;
     }
 }
 
 @media only screen and (max-width: 1500px){
     .teacherDeleteButton {
         position: relative;
-        right: 120px;
+        right: 85px;
+        bottom: 6px;
+    }
+
+    .studentTable {
+        grid-column-start: 3;
+        grid-column-end: 13;
     }
 }
 
 @media only screen and (max-width: 1300px){
     .addTeacherContainer {
-        grid-column-start: 16;
-        grid-column-end: 20;
+        grid-column-start: 15;
+        grid-column-end: 19;
         grid-row-start: 4;
     }
 
@@ -59,13 +71,18 @@
 
     .teacherDeleteButton {
         position: relative;
-        right: 95px;
-        bottom: 8px;
+        right: 80px;
+        bottom: 6px;
     }
     
     .editButtonModal {
         margin-top: 5%;
-        margin-left: 38%;
+        margin-left: 25%;
+    }
+
+    .studentTable {
+        grid-column-start: 3;
+        grid-column-end: 13;
     }
 }
 
@@ -76,13 +93,13 @@
 
     .teacherDeleteButton {
         position: relative;
-        right: 90px;
-        bottom: 6px;
+        right: 82px;
+        bottom: 5px;
     }
     
     .editButtonModal {
         margin-top: 5%;
-        margin-left: 28%;
+        margin-left: 20%;
     }
 
     .teachersModal {
@@ -103,11 +120,21 @@
         height: 4vh;
         width: 10vw;
     }
+
+    .studentTable {
+        grid-column-start: 3;
+        grid-column-end: 13;
+    }
 }
 
 @media only screen and (max-width: 1012px){
     .viewStudentsButton {
         font-size: 1em;
+    }
+
+    .studentTable {
+        grid-column-start: 3;
+        grid-column-end: 13;
     }
 }
 
@@ -120,11 +147,15 @@
     }
 
     .addTeacherFormButtons > button {
-        width: 7vw;
+        width: 9vw;
+        margin-right: 2vw;
+        height: 4vh;
+        min-height: 25px;
     }
 
     .teacherTable {
         grid-row-start: 12;
+        grid-column-start: 2;
         grid-column-end: 20;
     }
 
@@ -135,7 +166,13 @@
     }
 
     .viewTeachersTab {
-        grid-row-start: 11;
+        grid-column-start: 16;
+        grid-column-end: 20;
+    }
+
+    .addTeacherForm {
+        width: 40vw;
+        height: 36vh;
     }
 
     .addTeacherForm > form {
@@ -143,7 +180,7 @@
     }
 
     .addTeacherForm > form > input {
-        width: 28vw;
+        width: 33vw;
     }
 
     .addTeacherForm > form > button {
@@ -186,6 +223,11 @@
     .modalDeleteTeacher {
         height: 4vh;
         width: 20vw;
+    }
+
+    .studentTable {
+        grid-column-start: 2;
+        grid-column-end: 20;
     }
 }
 
@@ -230,6 +272,13 @@
     .modalDeleteTeacher {
         height: 4vh;
         width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 800){
+    .addTeacherForm {
+        width: 40vw;
+        height: 32vh;
     }
 }
 
@@ -366,7 +415,7 @@
     .teacherDeleteButton {
         position: relative;
         right: 62px;
-        bottom: 4px;
+        bottom: 0px;
     }
 
     .editButtonModal {
@@ -420,20 +469,21 @@
     }
 
     .editButtonModal {
-        margin-top: 3%;
-        margin-left: 5%;
+        margin-top: 0%;
+        margin-left: 18%;
     }
 
     .teacherDeleteButton {
         position: relative;
-        right: 62px;
-        bottom: 8px;
+        right: 58px;
+        bottom: 9px;
     }
 }
 
 @media only screen and (max-width: 500px){
     .addTeacherForm {
         width: 52vw;
+        height: 32vh;
     }
 
     .viewTeachersTab {
@@ -496,6 +546,11 @@
         height: 28px;
         font-size: 10px;
     }
+
+    .editButtonModal {
+        height: 28px;
+        font-size: 10px;
+    }
 }
 @media only screen and (max-width: 420px){
     .viewStudentsButton {
@@ -528,7 +583,7 @@
         font-size: 10px;
         position: relative;
         right: 43px;
-        bottom: 5px;
+        bottom: 7px;
     }
 
     .teachersModal {
@@ -548,5 +603,11 @@
     .modalDeleteTeacher {
         height: 4vh;
         width: 20vw;
+    }
+
+    .editButtonModal {
+        height: 27px;
+        width: 38px;
+        font-size: 10px;
     }
 }
