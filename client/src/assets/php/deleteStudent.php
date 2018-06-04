@@ -3,9 +3,13 @@
 header("Access-Control-Allow-Origin: *");
 require_once("mysql_credentials.php");
 
-$query = "SELECT * FROM student_data WHERE status = 1";
+$entityBody = file_get_contents('php://input');
+$request_data = json_decode($entityBody, true);
 
-$result = mysqli_query($con, $query);
+$userID = $request_data['id'];
+
+$query = "UPDATE student_data SET status = 0 WHERE id = $userID";
+
 $output = [
     'success'=> false,
     'tasks'=> [],
@@ -13,25 +17,13 @@ $output = [
     'errors'=> []
 ];
 
-if($result){
-    //query was fine
-    if(mysqli_num_rows($result)>0){
-        //query returned data
-        $output['success'] = true;
-        while($row = mysqli_fetch_assoc($result)){
-            $output['students'][] = $row;
-        }
-    } else {
-        //there was no data in the query
-        $output['errors'][] = 'no data available';
-    }
+if (mysqli_query($conn, $query)) {
+    $output['success'] = true;
+    echo "Student Deleted Successfully";
 } else {
-    //mysql problem
-    $output['errors'][] = 'error with query';
+    echo "Error updating record: " . mysqli_error($conn);
 }
 
-$json_output = json_encode($output);
-
-print($json_output);
+mysqli_close($conn);
 
 ?>
