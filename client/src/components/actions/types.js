@@ -1,4 +1,5 @@
 export default {
+    ADD_NEW_STUDENT: 'add_new_student',
     GET_STUDENT_LIST_DATA: 'get_student_list_data',
     GET_SELECTED_STUDENT_DATA: 'get_selected_student_data',
     GET_TEACHER_LIST_DATA: 'get_teacher_list_data',

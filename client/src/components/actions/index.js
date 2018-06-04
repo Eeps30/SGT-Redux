@@ -10,6 +10,17 @@ export function getStudentList(){
     }
 }
 
+export function addStudent(name, grade, course_name){
+    const response = axios.post('http://localhost:8080/lfz/sgt-react/client/src/assets/php/addStudent.php', {
+        name, grade, course_name
+    })
+
+    return {
+        type: types.ADD_NEW_STUDENT,
+        payload: response
+    }
+}
+
 export function getSelectedStudentData(id){
     const response = axios.get('http://localhost:8000/selectedStudent',{
         id

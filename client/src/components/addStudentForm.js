@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux'
-import { getStudentList } from '../components/actions'
+import { getStudentList, addStudent } from '../components/actions'
 
 class AddStudentForm extends Component {
     constructor(props){
@@ -81,26 +81,14 @@ class AddStudentForm extends Component {
             return
         }
 
-        axios.post('http://localhost:8080/lfz/sgt-react/client/src/assets/php/addStudent.php', {
-            name: name,
-            grade: grade,
-            course_name: course
-          })
+        this.props.addStudent(name, grade, course)
+        this.props.getStudentList();
 
-          .then((response) => {
-            console.log('response: ', response)
-            this.setState({
-                name: '',
-                course: '',
-                grade: ''
-            })
-
-          })
-
-          .catch(function (error) {
-            console.log(error);
-            return false
-          });
+        this.setState({
+            name: '',
+            course: '',
+            grade: ''
+        })
  
     }
 
@@ -132,4 +120,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {getStudentList})(AddStudentForm);
+export default connect(mapStateToProps, {getStudentList, addStudent})(AddStudentForm);
