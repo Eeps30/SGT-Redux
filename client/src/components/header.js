@@ -10,10 +10,13 @@ class Header extends Component {
         const { students } = this.props
         
         students.map((item, index) => {
-            gradeTotal += item.grade
+            gradeTotal += parseInt(item.grade)
         })
 
         gradeAverage = parseInt(gradeTotal/students.length)
+        if(isNaN(gradeAverage)){
+            gradeAverage = 0;
+        }
 
         return (
             <React.Fragment>

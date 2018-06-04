@@ -15,7 +15,7 @@ $output = [
 
 if($result){
     //query was fine
-    if(mysqli_num_rows($result)>0){
+    if(mysqli_num_rows($result) > 0){
         //query returned data
         $output['success'] = true;
         while($row = mysqli_fetch_assoc($result)){

@@ -12,24 +12,7 @@ class StudentRow extends Component {
     }
 
     async handleDelete(id){
-        const url = 'http://localhost:8080/lfz/sgt-react/client/src/assets/php/deleteStudent.php'
-        const params = {
-            id
-        }
-        
-        await axios({
-            url: url,
-            method: 'post',
-            data: params,
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        }).then(resp => {            
-            console.log('Axios response: ', resp)
-        }).catch(err => {
-            console.log('Error is: ', err);                
-        }
-    );
+        await this.props.deleteStudent(id)
         this.props.getStudentList()
     }
 

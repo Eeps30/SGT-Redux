@@ -2,7 +2,7 @@ import types from './types';
 import axios from 'axios';
 
 export function getStudentList(){
-    const response = axios.get('http://localhost:8000/students')
+    const response = axios.get('http://localhost:8080/lfz/sgt-react/client/src/assets/php/getStudentsList.php')
 
     return {
         type: types.GET_STUDENT_LIST_DATA,
@@ -31,7 +31,7 @@ export function getTeacherList(){
 }
 
 export function deleteStudent(id){
-    const response = axios.post('http://localhost:8000/students/delete', {
+    const response = axios.post('http://localhost:8080/lfz/sgt-react/client/src/assets/php/deleteStudent.php', {
             id
         })
 

@@ -29,16 +29,12 @@ class StudentTable extends Component {
     }
 
     async componentDidMount(){
-        const url = 'http://localhost:8080/lfz/sgt-react/client/src/assets/php/getStudentsList.php'
-        await axios.get(url).then(resp => {            
-                console.log('Axios response: ', resp.data.students)
-                this.setState({
-                    studentsArray: resp.data.students
-                })
-            }).catch(err => {
-                console.log('Error is: ', err);                
-            }
-        );
+        await this.props.getStudentList();
+        const { students } = this.props;
+
+        this.setState({
+            studentsArray: students
+        })
     }
 
     toggleModal() {
@@ -77,7 +73,7 @@ class StudentTable extends Component {
         return(
             <React.Fragment>
             <div className="studentContainer">
-                <Header/>
+                <Header studentArray={this.props}/>
                 <table className="studentTable">
                     <tbody>
                         <tr className="studentColumnLabels">
@@ -93,7 +89,7 @@ class StudentTable extends Component {
                 <Link className="btn viewStudentsButton" to="/">Students</Link>
                 <Link className="btn viewTeachersTab" to="/teacherTable">Teachers</Link>
             </div>
-            <EditStudentModal className="teachersEditModal" handleEdit={this.handleEdit.bind(this)} studentInfo={this.state.modalProps} editIsOpen={this.state.editModalIsActive} toggleModal={this.toggleModal.bind(this)}/>
+            <EditStudentModal className="studentsEditModal" handleEdit={this.handleEdit.bind(this)} studentInfo={this.state.modalProps} editIsOpen={this.state.editModalIsActive} toggleModal={this.toggleModal.bind(this)}/>
             </React.Fragment>
         )
     }

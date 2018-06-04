@@ -81,16 +81,14 @@ class AddStudentForm extends Component {
             return
         }
 
-        axios.post('http://localhost:8000/students/addstudent', {
+        axios.post('http://localhost:8080/lfz/sgt-react/client/src/assets/php/addStudent.php', {
             name: name,
             grade: grade,
             course_name: course
           })
 
           .then((response) => {
-            
-            this.props.getStudentList()
-
+            console.log('response: ', response)
             this.setState({
                 name: '',
                 course: '',
