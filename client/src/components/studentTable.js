@@ -28,21 +28,15 @@ class StudentTable extends Component {
         this.editClicked = this.editClicked.bind(this)
     }
 
-    // async componentDidMount() {
-    //     await this.props.getStudentList()
-    //     const { students } = this.props
-    //     console.log('Students List: ', students)
-    //     this.setState({
-    //         studentsArray: students
-    //     })
-    // }
-
-    componentDidMount(){
+    async componentDidMount(){
         const url = 'http://localhost:8080/lfz/sgt-react/client/src/assets/php/getStudentsList.php'
-        axios.get(url).then(resp => {            
+        await axios.get(url).then(resp => {            
                 console.log('Axios response: ', resp.data.students)
+                this.setState({
+                    studentsArray: resp.data.students
+                })
             }).catch(err => {
-                console.log('error is: ', err);                
+                console.log('Error is: ', err);                
             }
         );
     }
@@ -92,7 +86,7 @@ class StudentTable extends Component {
                             <td>Grade</td>
                             <td>Operations</td>
                         </tr>
-                        <StudentRow editClickHandler={this.editClicked}/>
+                        <StudentRow studentInfo={this.state.studentsArray} editClickHandler={this.editClicked}/>
                     </tbody>
                 </table>
                 <AddStudentForm/>

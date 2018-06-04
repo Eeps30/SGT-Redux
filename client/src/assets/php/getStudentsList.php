@@ -1,11 +1,11 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
-require_once('mysql_credentials.php');
+require_once("mysql_credentials.php");
 
 $query = "SELECT * FROM student_data WHERE status = 1";
 
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($con, $query);
 $output = [
     'success'=> false,
     'tasks'=> [],

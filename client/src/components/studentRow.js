@@ -7,7 +7,7 @@ import StudentModal from './studentModal'
 class StudentRow extends Component {
     
     async componentDidMount() {
-        await this.props.getStudentList()
+        console.log(this.props.studentInfo);
     }
 
     async handleDelete(id){
@@ -21,9 +21,8 @@ class StudentRow extends Component {
 
     render(){
 
-        const { students } = this.props
-        console.log('students:', students)
-        
+        const students = this.props.studentInfo
+
         const itemElements = students.map((item, index) => {
 
             return (
