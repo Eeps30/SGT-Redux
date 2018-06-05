@@ -5,7 +5,6 @@ import { getStudentList } from '../components/actions'
 class Header extends Component {
 
     render(){
-        this.props.getStudentList();
 
         let gradeTotal = 0
         let gradeAverage = 0

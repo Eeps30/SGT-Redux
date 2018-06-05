@@ -47,7 +47,7 @@ class AddStudentForm extends Component {
         })
     }
 
-    handleSubmit(event){
+    async handleSubmit(event){
         event.preventDefault();
 
         const { name, grade, course } = this.state
@@ -81,8 +81,8 @@ class AddStudentForm extends Component {
             return
         }
 
-        this.props.addStudent(name, grade, course)
-        this.props.getStudentList();
+        await this.props.addStudent(name, grade, course)
+        await this.props.getStudentList();
 
         this.setState({
             name: '',
