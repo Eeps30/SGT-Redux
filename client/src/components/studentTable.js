@@ -85,8 +85,8 @@ class StudentTable extends Component {
                     </tbody>
                 </table>
                 <AddStudentForm/>
-                <Link className="btn viewStudentsButton" to="/">Students</Link>
-                <Link className="btn viewTeachersTab" to="/teacherTable">Teachers</Link>
+                <Link className="btn viewStudentsButtonStudentTable" to="/">Students</Link>
+                <Link className="btn viewTeachersTabStudentTable" to="/teacherTable">Teachers</Link>
             </div>
             <EditStudentModal className="teachersEditModal" handleEdit={this.handleEdit.bind(this)} studentInfo={this.state.modalProps} editIsOpen={this.state.editModalIsActive} toggleModal={this.toggleModal.bind(this)}/>
             </React.Fragment>

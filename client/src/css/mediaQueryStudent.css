@@ -166,7 +166,7 @@
 
     .addStudentForm {
         width: 40vw;
-        height: 35vh;
+        height: 40vh;
     }
 
     .addStudentForm > form {
@@ -485,14 +485,15 @@
 
     .studentDeleteButton {
         position: relative;
-        right: 160%;
+        right: 140%;
+        bottom: 5px;
     }
 }
 
 @media only screen and (max-width: 600px){
     .addStudentForm {
         width: 42vw;
-        height: 32vh;
+        height: 35vh;
     }
 
     .addStudentFormButtons > button {
@@ -529,17 +530,17 @@
     }
 
     .studentGradeAverage {
-        grid-row-start: 8;
+        grid-row-start: 7;
         font-size: 3vmin;
         margin-top: 0;
     }
 
     .studentTable {
-        grid-row-start: 11;
+        grid-row-start: 10;
     }
 
     .viewStudentsButton {
-        grid-row-start: 10;
+        grid-row-start: 9;
     }
 
     .studentsEditModal {
@@ -598,7 +599,7 @@
     }
     
     .studentGradeAverage {
-        grid-row-start: 8;
+        grid-row-start: 7;
         grid-column-start: 14;
         grid-column-end: 20;
         height: 6vh;
@@ -606,7 +607,7 @@
     }
 
     .studentTable {
-        grid-row-start: 11;
+        grid-row-start: 10;
         grid-column-start: 2;
         grid-column-end: 20;
     }
@@ -667,7 +668,7 @@
         width: 45px;
         font-size: 10px;
         position: relative;
-        right: 115%;
+        right: 128%;
         bottom: 6px;
     }
 
@@ -728,5 +729,9 @@
 
     .addStudentFormButtons > button {
         width: 17vw;
+    }
+
+    .editButtonModal {
+        margin-left: 10%;
     }
 }
