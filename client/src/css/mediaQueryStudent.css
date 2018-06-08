@@ -29,7 +29,7 @@
         height: 34px;
         width: 38px;
         font-size: 13px;
-        margin-left: 16%;
+        margin-left: 24%;
     }
 
     .addStudentContainer {
@@ -49,7 +49,7 @@
 @media only screen and (max-width: 1500px){
     .studentDeleteButton {
         position: relative;
-        right: 108px;
+        right: 100px;
         bottom: 5px;
     }
 }
@@ -96,7 +96,7 @@
 
     .studentDeleteButton {
         right: 95px;
-        bottom: 3px;
+        bottom: 5px;
     }
     
     .studentModalText > button {
@@ -105,6 +105,10 @@
 }
 
 @media only screen and (max-width: 1160px){
+    .addStudentErrorMessage {
+        padding-top: 3%;
+    }
+    
     .viewTeachersTab {
         grid-column-start: 5;
         grid-column-end: 8;
@@ -139,6 +143,22 @@
 }
 
 @media only screen and (max-width: 1000px){
+    .viewStudentsButtonStudentTable {
+        grid-column-start: 13;
+        grid-row-start: 11;
+        width: 225%;
+        padding-top: 30%;
+        height: 62%;
+    }
+
+    .viewTeachersTabStudentTable {
+        grid-column-start: 16;
+        grid-row-start: 11;
+        width: 225%;
+        padding-top: 30%;
+        height: 62%;
+    }
+
     .addStudentContainer {
         grid-row-start: 3;
         grid-column-start: 2;
@@ -157,28 +177,31 @@
         grid-column-end: 20;
         height: 7vh;
         width: 16vw;
+        min-height: 45px;
     }
 
     .studentGradeAverage > p {
         margin-top: 8%;
-        font-size: 2.5vmin;
+        font-size: 18px;
     }
 
     .addStudentForm {
         width: 40vw;
         height: 40vh;
+        min-height: 300px;
     }
 
     .addStudentForm > form {
         height: 29vh;
         width: 67vw;
         display: inline-grid;
+        min-height: 190px;
     }
 
     .addStudentForm > form > input {
         margin-bottom: 3%;
         height: 3vh;
-        width: 52%;
+        width: 33vw;
         font-size: 100%;
     }
 
@@ -230,6 +253,12 @@
     .studentModalText > button {
         width: 12vw;
     }
+
+    .studentTable > tbody > tr > td {
+        padding-bottom: 2%;
+        padding-top: 2%;
+        padding-left: 6%;
+    }
 }
 
 @media only screen and (max-width: 900px){
@@ -243,6 +272,10 @@
         margin-right: 2vw;
         height: 4vh;
     }
+
+    .addStudentErrorMessage {
+        padding-top: 3%;
+    }
     
     .viewTeachersButton {
         grid-column-start: 11;
@@ -252,7 +285,8 @@
 
     .addStudentForm {
         width: 40vw;
-        height: 35vh;
+        height: 38vh;
+        min-height: 280px;
     }
 
     .viewStudentsButton {
@@ -270,10 +304,11 @@
         grid-column-end: 20;
         height: 7vh;
         width: 19vw;
+        min-height: 50px;
     }
 
     .studentTable {
-        grid-row-start: 12;
+        grid-row-start: 11;
         grid-column-start: 2;
         grid-column-end: 20;
     }
@@ -299,9 +334,25 @@
     .studentModalText > button {
         width: 14vw;
     }
+
+    .viewStudentsButtonStudentTable {
+        grid-row-start: 10;
+    }
+
+    .viewTeachersTabStudentTable {
+        grid-row-start: 10;
+    }
 }
 
 @media only screen and (max-width: 800px){
+    .viewStudentsButtonStudentTable {
+        height: 65%;
+    }
+
+    .viewTeachersTabStudentTable {
+        height: 65%;
+    }
+    
     .addStudentContainer {
         grid-column-start: 2;
         grid-row-start: 3;
@@ -310,7 +361,7 @@
 
     .addStudentForm {
         width: 40vw;
-        height: 35vh;
+        height: 37vh;
     }
 
     .addStudentFormButtons > button {
@@ -324,7 +375,7 @@
     }
 
     .studentGradeAverage {
-        grid-row-start: 9;
+        grid-row-start: 8;
         grid-column-start: 11;
         grid-column-end: 20;
         height: 6vh;
@@ -332,7 +383,7 @@
     }
 
     .studentTable {
-        grid-row-start: 12;
+        grid-row-start: 11;
         grid-column-start: 2;
         grid-column-end: 20;
     }
@@ -361,6 +412,12 @@
     }
 }
 
+@media only sreen and (max-width: 770px){
+    .editButtonModal {
+        margin-left: 22%;
+    }
+}
+
 @media only screen and (max-width: 720px){
     .addStudentContainer {
         grid-column-start: 2;
@@ -379,7 +436,7 @@
     }
     
     .studentGradeAverage {
-        grid-row-start: 9;
+        grid-row-start: 8;
         grid-column-start: 11;
         grid-column-end: 20;
         height: 6vh;
@@ -387,7 +444,7 @@
     }
 
     .studentTable {
-        grid-row-start: 12;
+        grid-row-start: 11;
         grid-column-start: 2;
         grid-column-end: 20;
     }
@@ -413,12 +470,27 @@
         width: 38px;
         font-size: 13px;
     }
+
+    .studentDeleteButton {
+        right: 100px;
+    }
 }
 
 @media only screen and (max-width: 700px){
+    .viewStudentsButtonStudentTable {
+        height: 70%;
+        grid-row-start: 10;
+    }
+
+    .viewTeachersTabStudentTable {
+        height: 70%;
+        grid-row-start: 10;
+    }
+    
     .addStudentForm {
         width: 40vw;
         height: 35vh;
+        min-height: 270px;
     }
     
     .addStudentContainer {
@@ -438,7 +510,7 @@
     }
     
     .studentGradeAverage {
-        grid-row-start: 9;
+        grid-row-start: 8;
         grid-column-start: 11;
         grid-column-end: 20;
         height: 6vh;
@@ -446,13 +518,13 @@
     }
 
     .studentTable {
-        grid-row-start: 12;
+        grid-row-start: 11;
         grid-column-start: 2;
         grid-column-end: 20;
     }
 
     .studentGradeAverage > p {
-        font-size: 3vmin;
+        font-size: 18px;
         margin-top: 8%
     }
 
@@ -469,7 +541,7 @@
     }
 
     .studentColumnLabels > td {
-        font-size: 1em;
+        font-size: 1.3em;
     }
 
     .viewStudentsButton {
@@ -481,19 +553,31 @@
         height: 34px;
         width: 38px;
         font-size: 13px;
+        margin-left: 20%;
     }
 
     .studentDeleteButton {
         position: relative;
-        right: 140%;
+        right: 125%;
         bottom: 5px;
     }
 }
 
 @media only screen and (max-width: 600px){
+    .viewStudentsButtonStudentTable {
+        grid-row-start: 10;
+        height: 75%;
+    }
+
+    .viewTeachersTabStudentTable {
+        grid-row-start: 10;
+        height: 75%;
+    }
+    
     .addStudentForm {
         width: 42vw;
         height: 35vh;
+        min-height: 250px;
     }
 
     .addStudentFormButtons > button {
@@ -529,14 +613,8 @@
         grid-row-start: 10;
     }
 
-    .studentGradeAverage {
-        grid-row-start: 7;
-        font-size: 3vmin;
-        margin-top: 0;
-    }
-
     .studentTable {
-        grid-row-start: 10;
+        grid-row-start: 11;
     }
 
     .viewStudentsButton {
@@ -566,6 +644,13 @@
         right: 130%;
         bottom: 2px;
     }
+
+    .studentGradeAverage {
+        grid-column-start: 12;
+        grid-row-start: 8;
+        font-size: 3vmin;
+        margin-top: 0;
+    }
 }
 
 @media only screen and (max-width: 540px){
@@ -574,9 +659,31 @@
         right: 130%;
         bottom: 9px;
     }
+
+    .studentGradeAverage {
+        grid-column-start: 12;
+        grid-row-start: 8;
+    }
 }
 
 @media only screen and (max-width: 520px){
+    .viewStudentsButtonStudentTable {
+        grid-row-start: 9;
+        width: 265%;
+        height: 65%;
+        position: relative;
+        top: 6px;
+    }
+
+    .viewTeachersTabStudentTable {
+        grid-row-start: 9;
+        width: 265%;
+        height: 65%;
+        position: relative;
+        top: 6px;
+        left: 12px;
+    }
+    
     .addStudentContainer {
         grid-column-start: 2;
         grid-row-start: 3;
@@ -595,7 +702,7 @@
 
     .addStudentForm {
         width: 52vw;
-        height: 32vh;
+        height: 34vh;
     }
     
     .studentGradeAverage {
@@ -604,6 +711,7 @@
         grid-column-end: 20;
         height: 6vh;
         width: 28vw;
+        min-height: 40px;
     }
 
     .studentTable {
@@ -645,12 +753,42 @@
         font-size: 13px;
     }
 
+    .teacherDeleteButton {
+        font-size: 13px;
+    }
+
+    .studentDeleteButton {
+        right: 115%;
+    }
+
     .studentModalText > button {
         width: 20vw;
     }
 }
 
 @media only screen and (max-width: 462px){
+    .viewStudentsButtonStudentTable {
+        width: 275%;
+        height: 65%;
+        position: relative;
+        top: 5px;
+    }
+
+    .viewTeachersTabStudentTable {
+        width: 275%;
+        height: 65%;
+        position: relative;
+        top: 5px;
+        left: 10px;
+    }
+    
+    .addStudentErrorMessage {
+        padding-top: 0%;
+        position: relative;
+        bottom: 4px;
+        top: 2px;
+    }
+    
     .studentsEditModal {
         width: 60vw;
     }
@@ -687,6 +825,24 @@
 }
 
 @media only screen and (max-width: 420px){
+    .viewStudentsButtonStudentTable {
+        font-size: 0.6em;
+        height: 62%;
+        position: relative;
+        top: 9px;
+    }
+
+    .viewTeachersTabStudentTable {
+        font-size: 0.6em;
+        height: 62%;
+        position: relative;
+        top: 9px;
+    }
+    
+    .studentDeleteButton {
+        right: 108%;
+    }
+    
     .studentGradeAverage > p {
         font-size: 3.5vmin;
         margin-top: 14%;
@@ -733,5 +889,17 @@
 
     .editButtonModal {
         margin-left: 10%;
+    }
+
+    .addStudentForm {
+        min-height: 240px;
+    }
+
+    .addStudentErrorMessage {
+        margin-bottom: 8px;
+    }
+
+    .studentGradeAverage > p {
+        font-size: 12px;
     }
 }
