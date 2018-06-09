@@ -24,12 +24,30 @@
         grid-column-start: 3;
         grid-column-end: 13;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 60px;
+        bottom: 1px;
+    }
+
+    .teacherColumnLabels > td {
+        font-size: 1.3em;
+    }
 }
 
 @media only screen and (max-width: 1500px){
     .studentTable {
         grid-column-start: 3;
         grid-column-end: 13;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .teacherDeleteButton {
+        position: relative;
+        right: 45px;
+        bottom: 1px;
     }
 }
 
@@ -86,6 +104,28 @@
         grid-column-start: 3;
         grid-column-end: 13;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 35px;
+        bottom: 1px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .teacherDeleteButton {
+        position: relative;
+        right: 25px;
+        bottom: 1px;
+    }
+
+    .viewTeachersTab {
+        height: 78%;
+    }
+
+    .viewStudentsButton {
+        height: 78%;
+    }
 }
 
 @media only screen and (max-width: 1012px){
@@ -134,8 +174,9 @@
 
     .addTeacherForm {
         width: 40vw;
-        height: 40vh;
-        min-height: 305px;
+        height: 37vh;
+        min-height: 300px;
+        max-height: 300px;
     }
 
     .addTeacherForm > form {
@@ -181,9 +222,21 @@
         grid-column-start: 2;
         grid-column-end: 20;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 60px;
+        bottom: 1px;
+    }
 }
 
 @media only screen and (max-width: 900px){
+    .teacherDeleteButton {
+        position: relative;
+        right: 40px;
+        bottom: 1px;
+    }
+    
     .viewStudentsButton {
         height: 76%;
     }
@@ -296,14 +349,20 @@
     }
 
     .addTeacherForm {
-        height: 37vh;
+        height: 34vh;
+    }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 25px;
+        bottom: 1px;
     }
 }
 
 @media only screen and (max-width: 700px){
     .addTeacherForm {
         width: 42vw;
-        height: 35vh;
+        height: 33vh;
         min-height: 264px;
     }
 
@@ -345,6 +404,10 @@
         height: 4vh;
         width: 20vw;
     }
+
+    .teacherColumnLabels > td {
+        font-size: 1.3em;
+    }
 }
 
 @media only screen and (max-width: 620px){
@@ -357,7 +420,7 @@
     }
 
     .addTeacherForm {
-        height: 35vh;
+        height: 33vh;
     }
 
     .teacherTable {
@@ -414,7 +477,7 @@
     }
 
     .addTeacherForm {
-        height: 35vh;
+        height: 33vh;
     }
 }
 
@@ -441,12 +504,19 @@
         width: 52vw;
         min-height: 280px;
     }
+
+    .teacherDeleteButton {
+        position: relative;
+        right: 15px;
+        bottom: 1px;
+    }
 }
 
 @media only screen and (max-width: 500px){
     .addTeacherForm {
         width: 52vw;
-        height: 32vh;
+        height: 31vh;
+        min-height: 268px;
     }
 
     .viewTeachersTab {
@@ -509,6 +579,50 @@
     .addTeacherErrorMessage {
         margin-top: 2%;
     }
+
+    .teacherTable {
+        grid-row-start: 11;
+    }
+
+    .viewStudentsButton {
+        grid-row-start: 10;
+    }
+
+    .viewTeachersTab {
+        grid-row-start: 10;
+    }
+
+    .addTeacherForm {
+        height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 460px){
+    .teacherDeleteButton {
+        position: relative;
+        right: 5px;
+        bottom: 1px;
+    }
+
+    .editButtonModal {
+        font-size: 13px;
+    }
+
+    .teacherTable {
+        grid-row-start: 11;
+    }
+
+    .viewStudentsButton {
+        grid-row-start: 10;
+    }
+
+    .viewTeachersTab {
+        grid-row-start: 10;
+    }
+
+    .addTeacherForm {
+        height: 30vh;
+    }
 }
 
 @media only screen and (max-width: 426px){
@@ -521,19 +635,36 @@
         height: 28px;
         font-size: 10px;
     }
+
+    .teacherTable {
+        grid-row-start: 11;
+    }
+
+    .viewStudentsButton {
+        grid-row-start: 10;
+    }
+
+    .viewTeachersTab {
+        grid-row-start: 10;
+    }
+
+    .addTeacherForm {
+        height: 30vh;
+    }
 }
+
 @media only screen and (max-width: 420px){
     .teacherTable > tbody > tr > td {
-        font-size: 0.8em;
+        font-size: 1em;
     }
     
     .teacherTable {
-        grid-row-start: 10;
+        grid-row-start: 11;
     }
     
     .viewStudentsButton {
         font-size: 0.8em;
-        grid-row-start: 9;
+        grid-row-start: 10;
     }
 
     .addTeacherFormButtons > button {
@@ -542,11 +673,7 @@
 
     .viewTeachersTab {
         font-size: 0.8em;
-        grid-row-start: 9;
-    }
-
-    .teacherColumnLabels > td {
-        font-size: 0.8em;
+        grid-row-start: 10;
     }
 
     .teachersEditModal {
@@ -559,8 +686,11 @@
 
     .teacherDeleteButton {
         height: 27px;
-        width: 42px;
+        width: 45px;
         font-size: 10px;
+        position: relative;
+        right: 0px;
+        bottom: 1px;
     }
 
     .teachersModal {
@@ -586,6 +716,10 @@
         height: 27px;
         width: 38px;
         font-size: 10px;
+    }
+
+    .addTeacherForm {
+        height: 30vh;
     }
 }
 
