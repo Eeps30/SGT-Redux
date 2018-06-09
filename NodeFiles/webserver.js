@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
-const 
+const serverCredentials = require('./webserverCredentials');
 
 const app = express();
 const PORT = 8000;
@@ -10,11 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    database: 'sgt'
-});
+const connection = mysql.createConnection(serverCredentials.webserverCredentials);
 
 connection.connect((err) => {
     if (err) {
