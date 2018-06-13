@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 const serverCredentials = require('./webserverCredentials');
+const expressValidator = require('express-validator');
 
 const app = express();
 const PORT = 8000;
