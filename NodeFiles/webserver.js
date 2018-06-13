@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 const serverCredentials = require('./webserverCredentials');
-const expressValidator = require('express-validator');
+
 
 const app = express();
 const PORT = 8000;
@@ -75,8 +75,11 @@ app.get('/teachers', (req, res, next) => {
     })
 })
 
+const { buildSanitizeFunction } = require('express-validator/filter');
+const sanitizeBody = buildSanitizeFunction(['body']);
+
 //INSERT STUDENT TO TABLE
-app.post('/students/addstudent', (req, res, next) => {
+app.post('/students/addstudent', [sanitizeBody('body')], (req, res, next) => {
     const { name, grade, course_name } = req.body;
 
     let query = 'INSERT INTO ?? (??, ??, ??) VALUES (?, ?, ?)';
@@ -95,7 +98,7 @@ app.post('/students/addstudent', (req, res, next) => {
 })
 
 //INSERT TEACHER TO TABLE
-app.post('/students/addteacher', (req, res, next) => {
+app.post('/students/addteacher',[sanitizeBody('body')], (req, res, next) => {
     const { name, course_name, class_size } = req.body;
 
     let query = 'INSERT INTO ?? (??, ??, ??) VALUES (?, ?, ?)';
@@ -152,7 +155,7 @@ app.post('/teachers/delete', (req, res, next) => {
 });
 
 //EDIT STUDENT IN TABLE
-app.post('/students/edit', (req, res, next) => {
+app.post('/students/edit', [sanitizeBody('body')], (req, res, next) => {
     const { id, name, grade, course_name } = req.body;
 
     let query = 'UPDATE ?? SET ?? = ?, ?? = ?, ?? = ? WHERE ?? = ?'
@@ -171,7 +174,7 @@ app.post('/students/edit', (req, res, next) => {
 })
 
 //EDIT TEACHER IN TABLE
-app.post('/teachers/edit', (req, res, next) => {
+app.post('/teachers/edit', [sanitizeBody('body')], (req, res, next) => {
     const { id, name, course_name, class_size } = req.body;
 
     let query = 'UPDATE ?? SET ?? = ?, ?? = ?, ?? = ? WHERE ?? = ?'
