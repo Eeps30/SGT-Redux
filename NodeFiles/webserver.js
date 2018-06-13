@@ -40,9 +40,10 @@ app.get('/students', (req, res, next) => {
 //RETRIEVE SELECTED STUDENT DATA
 app.get('/selectedStudent', (req, res, next) => {
     const { id } = req.body;
+    let sanitizedId = parseInt(id);
 
     let query = 'SELECT * FROM ?? WHERE ?? = ?';
-    let inserts = ['student_data', 'id', id];
+    let inserts = ['student_data', 'id', sanitizedId];
     let sql = mysql.format(query, inserts);
 
     connection.query(sql, (err, results, fields) => {
