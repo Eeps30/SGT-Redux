@@ -2,7 +2,7 @@ import types from './types';
 import axios from 'axios';
 
 export function getStudentList(){
-    const response = axios.get('http://localhost:8000/students')
+    const response = axios.get('/students')
 
     return {
         type: types.GET_STUDENT_LIST_DATA,
@@ -11,7 +11,7 @@ export function getStudentList(){
 }
 
 export function getSelectedStudentData(id){
-    const response = axios.get('http://localhost:8000/selectedStudent',{
+    const response = axios.get('/selectedStudent',{
         id
     })
 
@@ -22,7 +22,7 @@ export function getSelectedStudentData(id){
 }
 
 export function getTeacherList(){
-    const response = axios.get('http://localhost:8000/teachers')
+    const response = axios.get('/teachers')
 
     return {
         type: types.GET_TEACHER_LIST_DATA,
@@ -31,7 +31,7 @@ export function getTeacherList(){
 }
 
 export function deleteStudent(id){
-    const response = axios.post('http://localhost:8000/students/delete', {
+    const response = axios.post('/students/delete', {
             id
         })
 
@@ -42,7 +42,7 @@ export function deleteStudent(id){
 }
 
 export function deleteTeacher(id){
-    const response = axios.post('http://localhost:8000/teachers/delete', {
+    const response = axios.post('/teachers/delete', {
             id
         })
 
@@ -53,7 +53,7 @@ export function deleteTeacher(id){
 }
 
 export function editStudent(id, name, grade, course_name){
-    const response = axios.post('http://localhost:8000/students/edit', {
+    const response = axios.post('/students/edit', {
         id, name, grade, course_name
     })
 
@@ -64,7 +64,7 @@ export function editStudent(id, name, grade, course_name){
 }
 
 export function editTeacher(id, name, course_name, class_size){
-    const response = axios.post('http://localhost:8000/teachers/edit', {
+    const response = axios.post('/teachers/edit', {
         id, name, course_name, class_size
     })
 

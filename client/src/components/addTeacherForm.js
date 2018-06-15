@@ -80,7 +80,7 @@ class AddTeacherForm extends Component {
             return
         }
 
-        axios.post('http://localhost:8000/students/addteacher', {
+        axios.post('/students/addteacher', {
             name: name,
             course_name: course,
             class_size: size

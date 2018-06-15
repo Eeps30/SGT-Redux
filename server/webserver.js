@@ -1,15 +1,17 @@
 const express = require('express');
 const mysql = require('mysql');
-const cors = require('cors');
+const path = require('path');
+// const cors = require('cors');
 const serverCredentials = require('./webserverCredentials');
 
 
 const app = express();
 const PORT = 8000;
 
-app.use(cors());
+// app.use(cors()); 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 const connection = mysql.createConnection(serverCredentials.webserverCredentials);
 
@@ -192,6 +194,9 @@ app.post('/teachers/edit', [sanitizeBody('body')], (req, res, next) => {
     })
 })
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+});
 
 app.listen(PORT, () => {
     console.log("Server started on PORT: ", PORT);

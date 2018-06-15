@@ -81,7 +81,7 @@ class AddStudentForm extends Component {
             return
         }
 
-        axios.post('http://localhost:8000/students/addstudent', {
+        axios.post('/students/addstudent', {
             name: name,
             grade: grade,
             course_name: course
